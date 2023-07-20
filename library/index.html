@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Library</title>
+    <link rel="stylesheet" href="assets/css/normalize.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="icon" href="assets/favicon.ico"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <h1 class="header-title">Brooklyn Public Library</h1>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#favorites" class="nav-link">Favorites</a></li>
+            <li class="nav-item"><a href="#coffe-shop" class="nav-link">Coffe shop</a></li>
+            <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+            <li class="nav-item"><a href="#library-card" class="nav-link">Library Card</a></li>
+          </ul>
+        </nav>
+        <img src="assets/svg/icon_profile.svg" alt="profile_icon" class="profile-svg"/>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container main-container">
+        <section class="section" id="welcome">
+          <div class="welcome-bg">
+            <h2 class="welcome-bg-text">Welcome <br> to the Brooklyn <br> Library</h2>
+          </div>
+          <div class="welcome-overlay"></div>
+        </section>
+        <div class="main-body">
+          <section class="section" id="about">
+            <h2>About</h2>
+            <hr class="sections-hr">
+            <p class="about-title">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
+            <div class="image-items">
+              <img src="assets/img/image1.jpg" alt="image1"/>
+              <img src="assets/img/image2.jpg" alt="image2"/>
+              <img src="assets/img/image3.jpg" alt="image3"/>
+            </div>
+            <div class="carousel-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="68" height="16" viewBox="0 0 68 16" fill="none">
+                <rect width="16" height="16" rx="8" fill="#BB945F"/>
+                <rect x="26" width="16" height="16" rx="8" fill="#0C0C0E"/>
+                <rect x="52" width="16" height="16" rx="8" fill="#0C0C0E"/>
+              </svg>
+            </div>
+          </section>
+          <section class="section" id="favorites">
+            <h2>Favorites</h2>
+            <hr class="sections-hr">
+            <p class="favorites-season-title">Pick favorites of season</p>
+            <form>
+              <input type="radio" id="winter" name="favorites-season-group">
+              <label for="winter">Winter</label>
+
+              <input type="radio" id="spring" name="favorites-season-group">
+              <label for="spring">Spring</label>
+
+              <input type="radio" id="summer" name="favorites-season-group">
+              <label for="summer">Summer</label>
+
+              <input type="radio" id="autumn" name="favorites-season-group">
+              <label for="autumn">Autumn</label>
+            </form>
+            <div class="favorites-items">
+              <div class="favorites-items-outer-box" id="first-book">
+                <div class="favorites-items-inner-box">
+                  <h4 class="favorites-items-staff-picks">Staff Picks</h4>
+                  <hr class="favorites-items-hr">
+                  <h5 class="favorites-items-header">
+                    <span class="favorites-items-title">
+                      The Book Eaters
+                    </span>
+                    <br>
+                    <span class="favorites-items-author">
+                      By Sunyi Dean
+                    </span>
+                  </h5>
+                  <p class="favorites-items-content">
+                    An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.
+                  </p>
+                </div>
+                <img src="assets/img/book1.jpg" alt="book1" class="favorites-items-book-img"/>
+              </div>
+              <div class="favorites-items-outer-box" id="second-book">
+                <div class="favorites-items-inner-box">
+                  <h4 class="favorites-items-staff-picks">Staff Picks</h4>
+                  <hr class="favorites-items-hr">
+                  <h5 class="favorites-items-header">
+                    <span class="favorites-items-title">
+                      Cackle
+                    </span>
+                    <br>
+                    <span class="favorites-items-author">
+                      By Rachel Harrison
+                    </span>
+                  </h5>
+                  <p class="favorites-items-content">
+                    Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.
+                  </p>
+                </div>
+                <img src="assets/img/book2.jpg" alt="book2" class="favorites-items-book-img"/>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="coffe-shop">
+            <h2>Coffe shop</h2>
+            <hr class="sections-hr">
+          </section>
+          <section class="section" id="contacts">
+            <h2>Contacts</h2>
+            <hr class="sections-hr">
+          </section>
+          <section class="section" id="library-card">
+            <h2>Library Card</h2>
+            <hr class="sections-hr">
+          </section>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-container"></div>
+    </footer>
+  </body>
+</html>
