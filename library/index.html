@@ -1,130 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Library</title>
-    <link rel="stylesheet" href="assets/css/normalize.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="icon" href="assets/favicon.ico"/>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header-container">
-        <h1 class="header-title">Brooklyn Public Library</h1>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+
+  <link rel="stylesheet" href="assets/css/normalize.css">
+
+  <link rel="stylesheet" href="assets/css/header_section.css">
+  <link rel="stylesheet" href="assets/css/welcome_section.css">
+  <link rel="stylesheet" href="assets/css/about_section.css">
+  <link rel="stylesheet" href="assets/css/favorites_section.css">
+  <link rel="stylesheet" href="assets/css/coffee_shop_section.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="header-title">Brooklyn Public Library</h1>
+
+      <div class="nav-wrapper">
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="#favorites" class="nav-link">Favorites</a></li>
-            <li class="nav-item"><a href="#coffe-shop" class="nav-link">Coffe shop</a></li>
+            <li class="nav-item"><a href="#coffee-shop" class="nav-link">Coffee shop</a></li>
             <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
             <li class="nav-item"><a href="#library-card" class="nav-link">Library Card</a></li>
           </ul>
         </nav>
-        <img src="assets/svg/icon_profile.svg" alt="profile_icon" class="profile-svg"/>
+
+        <a href="#" class="profile-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
+              fill="white" />
+          </svg>
+        </a>
       </div>
-    </header>
-    <main class="main">
-      <div class="container main-container">
-        <section class="section" id="welcome">
-          <div class="welcome-bg">
-            <h2 class="welcome-bg-text">Welcome <br> to the Brooklyn <br> Library</h2>
-          </div>
-          <div class="welcome-overlay"></div>
-        </section>
-        <div class="main-body">
-          <section class="section" id="about">
-            <h2>About</h2>
-            <hr class="sections-hr">
-            <p class="about-title">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
-            <div class="image-items">
-              <img src="assets/img/image1.jpg" alt="image1"/>
-              <img src="assets/img/image2.jpg" alt="image2"/>
-              <img src="assets/img/image3.jpg" alt="image3"/>
-            </div>
-            <div class="carousel-container">
-              <svg xmlns="http://www.w3.org/2000/svg" width="68" height="16" viewBox="0 0 68 16" fill="none">
-                <rect width="16" height="16" rx="8" fill="#BB945F"/>
-                <rect x="26" width="16" height="16" rx="8" fill="#0C0C0E"/>
-                <rect x="52" width="16" height="16" rx="8" fill="#0C0C0E"/>
-              </svg>
-            </div>
-          </section>
-          <section class="section" id="favorites">
-            <h2>Favorites</h2>
-            <hr class="sections-hr">
-            <p class="favorites-season-title">Pick favorites of season</p>
-            <form>
-              <input type="radio" id="winter" name="favorites-season-group">
-              <label for="winter">Winter</label>
-
-              <input type="radio" id="spring" name="favorites-season-group">
-              <label for="spring">Spring</label>
-
-              <input type="radio" id="summer" name="favorites-season-group">
-              <label for="summer">Summer</label>
-
-              <input type="radio" id="autumn" name="favorites-season-group">
-              <label for="autumn">Autumn</label>
-            </form>
-            <div class="favorites-items">
-              <div class="favorites-items-outer-box" id="first-book">
-                <div class="favorites-items-inner-box">
-                  <h4 class="favorites-items-staff-picks">Staff Picks</h4>
-                  <hr class="favorites-items-hr">
-                  <h5 class="favorites-items-header">
-                    <span class="favorites-items-title">
-                      The Book Eaters
-                    </span>
-                    <br>
-                    <span class="favorites-items-author">
-                      By Sunyi Dean
-                    </span>
-                  </h5>
-                  <p class="favorites-items-content">
-                    An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.
-                  </p>
-                </div>
-                <img src="assets/img/book1.jpg" alt="book1" class="favorites-items-book-img"/>
-              </div>
-              <div class="favorites-items-outer-box" id="second-book">
-                <div class="favorites-items-inner-box">
-                  <h4 class="favorites-items-staff-picks">Staff Picks</h4>
-                  <hr class="favorites-items-hr">
-                  <h5 class="favorites-items-header">
-                    <span class="favorites-items-title">
-                      Cackle
-                    </span>
-                    <br>
-                    <span class="favorites-items-author">
-                      By Rachel Harrison
-                    </span>
-                  </h5>
-                  <p class="favorites-items-content">
-                    Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.
-                  </p>
-                </div>
-                <img src="assets/img/book2.jpg" alt="book2" class="favorites-items-book-img"/>
-              </div>
-            </div>
-          </section>
-          <section class="section" id="coffe-shop">
-            <h2>Coffe shop</h2>
-            <hr class="sections-hr">
-          </section>
-          <section class="section" id="contacts">
-            <h2>Contacts</h2>
-            <hr class="sections-hr">
-          </section>
-          <section class="section" id="library-card">
-            <h2>Library Card</h2>
-            <hr class="sections-hr">
-          </section>
-        </div>
     </div>
-    </main>
-    <footer class="footer">
-      <div class="container footer-container"></div>
-    </footer>
-  </body>
+  </header>
+
+  <main class="main">
+
+    <section class="main-section" id="welcome">
+      <div class="welcome-overlay"></div>
+
+      <div class="welcome-bg">
+        <h3 class="welcome-bg-text">Welcome <br> to the Brooklyn <br> Library</h3>
+      </div>
+    </section>
+
+    <div class="main-container">
+
+      <section class="section" id="about">
+        <h2 class="section-header">About</h2>
+        <hr class="sections-hr">
+        <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
+
+        <div class="image-items">
+          <img src="assets/img/image1.jpg" alt="image1" class="image-item">
+          <img src="assets/img/image2.jpg" alt="image2" class="image-item">
+          <img src="assets/img/image3.jpg" alt="image3" class="image-item">
+        </div>
+
+        <div class="carousel-container">
+          <form>
+            <input type="radio" id="carousel-first-radio" name="carousel-radio-group" class="carousel-radio-group" checked="checked">
+
+            <input type="radio" id="carousel-second-radio" name="carousel-radio-group" class="carousel-radio-group">
+
+            <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="favorites">
+        <h2 class="section-header" id="favorites-header">Favorites</h2>
+        <hr class="sections-hr">
+        <p class="favorites-season-title">Pick favorites of season</p>
+
+        <form class="favorite-seasons">
+          <label for="winter" class="favorites-season-label">
+            <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio"
+              checked="checked">
+            <span>Winter</span>
+          </label>
+
+          <label for="spring" class="favorites-season-label">
+            <input type="radio" id="spring" name="favorites-season-group" class="favorites-season-radio">
+            <span>Spring</span>
+          </label>
+
+          <label for="summer" class="favorites-season-label">
+            <input type="radio" id="summer" name="favorites-season-group" class="favorites-season-radio">
+            <span>Summer</span>
+          </label>
+
+          <label for="autumn" class="favorites-season-label">
+            <input type="radio" id="autumn" name="favorites-season-group" class="favorites-season-radio">
+            <span>Autumn</span>
+          </label>
+        </form>
+
+        <div class="favorites-items">
+          <div class="favorites-items-box" id="first-book">
+            <h4 class="favorites-items-staff-picks">Staff Picks</h4>
+            <hr class="favorites-items-hr">
+            <h5 class="favorites-items-header">
+              <span class="favorites-items-title">
+                The Book Eaters
+              </span>
+              <br>
+              <span class="favorites-items-author">
+                By Sunyi Dean
+              </span>
+            </h5>
+            <p class="favorites-items-text">
+              An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater
+              son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance,
+              and a strong, complex protagonist. Not for the faint of heart.
+            </p>
+            <button type="button" class="favorites-items-box-buy-btn">Buy</button>
+            <img src="assets/img/book1.jpg" alt="book1" class="favorites-items-box-img">
+          </div>
+
+          <div class="favorites-items-box" id="second-book">
+            <h4 class="favorites-items-staff-picks">Staff Picks</h4>
+            <hr class="favorites-items-hr">
+            <h5 class="favorites-items-header">
+              <span class="favorites-items-title">
+                Cackle
+              </span>
+              <br>
+              <span class="favorites-items-author">
+                By Rachel Harrison
+              </span>
+            </h5>
+            <p class="favorites-items-text">
+              Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than
+              here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends
+              a beautiful witch.
+            </p>
+            <button type="button" class="favorites-items-box-buy-btn">Buy</button>
+            <img src="assets/img/book2.jpg" alt="book2" class="favorites-items-box-img">
+          </div>
+
+          <div class="favorites-items-box" id="third-book">
+            <h4 class="favorites-items-staff-picks">Staff Picks</h4>
+            <hr class="favorites-items-hr">
+            <h5 class="favorites-items-header">
+              <span class="favorites-items-title">
+                Dante: Poet of the Secular World
+              </span>
+              <br>
+              <span class="favorites-items-author">
+                By Erich Auerbach
+              </span>
+            </h5>
+            <p class="favorites-items-text">
+              Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in
+              general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into
+              something of divine significance—an inspired introduction to Dante's main themes.
+            </p>
+            <button type="button" class="favorites-items-box-buy-btn">Buy</button>
+            <img src="assets/img/book3.jpg" alt="book3" class="favorites-items-box-img">
+          </div>
+
+          <div class="favorites-items-box" id="fourth-book">
+            <h4 class="favorites-items-staff-picks">Staff Picks</h4>
+            <hr class="favorites-items-hr">
+            <h5 class="favorites-items-header">
+              <span class="favorites-items-title">
+                The Last Queen
+              </span>
+              <br>
+              <span class="favorites-items-author">
+                By Clive Irving
+              </span>
+            </h5>
+            <p class="favorites-items-text">
+              A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors
+              have evolved and thrived as the modern world has changed around them.
+            </p>
+            <button type="button" class="favorites-items-box-buy-btn" disabled>Own</button>
+            <img src="assets/img/book4.jpg" alt="book4" class="favorites-items-box-img">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="coffee-shop">
+        <h2 class="section-header" id="coffee-shop-header">Coffee shop</h2>
+        <hr class="sections-hr">
+        <p class="coffee-shop-text">
+          In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br>
+          You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+        </p>
+
+        <div class="coffee-shop-menus">
+          <div class="coffee-shop-menu-left">
+            <p class="coffee-shop-menu-header coffee-shop-menu-left-header">Coffee & Tea</p>
+
+            <ul class="coffee-shop-menu-data coffee-shop-menu-left-data">
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name">Cold Brew Coffee</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$3</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name">French Press Pot</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$5</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name">Espresso</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$2</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name">Cappuccino</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$4</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name">Hot tea</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$2</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name">Cold tea</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$2</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="coffee-shop-menu-right">
+            <p class="coffee-shop-menu-header coffee-shop-menu-right-header">Desserts & Cakes</p>
+
+            <ul class="coffee-shop-menu-data coffee-shop-menu-right-data">
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Forest Gateau</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$16</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Blue Moon</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$16</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Truffle Cake</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$15</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Chocolate Cake</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$18</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Poet’s Dream Cake</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$16</p>
+              </li>
+
+              <li class="coffee-shop-menu-subdata">
+                <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Pineapple Cake</p>
+                <hr class="coffee-shop-menu-line">
+                <p class="coffee-shop-menu-price">$14</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contacts">
+        <h2 class="section-header">Our Contacts</h2>
+        <hr class="sections-hr">
+      </section>
+
+      <section class="section" id="library-card">
+        <h2 class="section-header">Library Card</h2>
+        <hr class="sections-hr">
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container"></div>
+  </footer>
+
+</body>
+
 </html>
