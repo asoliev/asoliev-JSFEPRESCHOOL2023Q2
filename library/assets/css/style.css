@@ -1,13 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap');
 
-/* *{box-sizing: border-box;} */
-/* html{scroll-behavior: smooth;} */
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html{scroll-behavior: smooth;}
 /* body{} */
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+}
+
+.button {
+  width: 75px;
+  height: 30px;
+  background-color: #FFF;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.button:hover{
+  background-color: #BB945F;
+  border-color: #BB945F;
 }
 
 /*header_section.css*/
@@ -28,9 +53,9 @@
 .sections-hr {
   width: 50px;
   background-color: #0C0C0E;
-  border-width: 0;
+  border: none;
   height: 1px;
-  margin: 20px auto;
+  margin: 20px auto 40px;
 }
 .section{padding: 20px 0px 40px;}
 
@@ -41,3 +66,5 @@
 /*about_section.css*/
 /*favorites_section.css*/
 /*coffe_shop_section.css*/
+/*contacts_section.css*/
+/*library_card_section.css*/

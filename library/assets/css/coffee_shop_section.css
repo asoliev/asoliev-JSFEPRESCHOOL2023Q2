@@ -1,9 +1,6 @@
-#coffee-shop-header{margin-top: 5px;}
-
 .coffee-shop-text{
   margin: 40px 0px;
   color: #000;
-  text-align: center;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -48,7 +45,7 @@
 
 .coffee-shop-menu-name {
   margin: 0px 60px 0px 0px;
-  width: 212px;
+  width: 200px;
 
   color: #000;
   font-family: Inter;
@@ -61,6 +58,7 @@
 }
 .coffee-shop-menu-right-name {
   text-align: end;
+  width: 212px;
 }
 
 .coffee-shop-menu-line {
