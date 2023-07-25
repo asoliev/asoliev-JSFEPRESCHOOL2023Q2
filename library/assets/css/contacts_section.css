@@ -1,11 +1,7 @@
-/* .contacts-section {margin-top: -16px;} */
-
 .contacts-innerbox {
   display: flex;
   justify-content: space-between;
 }
-
-.section-header-contacts{margin-top: -15px;}
 
 .phone-info{margin-bottom: 40px;}
 
