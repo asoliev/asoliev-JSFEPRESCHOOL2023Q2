@@ -198,7 +198,10 @@ html{scroll-behavior: smooth;}
   justify-content: center;
 }
 
-.carousel-radio-label{padding: 5px;}
+.carousel-radio-label {
+  cursor: pointer;
+  padding: 5px;
+}
 
 .carousel-radio-group {
   visibility: hidden;
@@ -363,9 +366,7 @@ html{scroll-behavior: smooth;}
   background-color: #0C0C0E;
   padding: 20px 0px 44px;
 }
-.footer-container {
-  max-width: 1400px;
-}
+.footer-container{max-width: 1400px;}
 .footer-part1 {
   color: #FFF;
   font-family: Inter;

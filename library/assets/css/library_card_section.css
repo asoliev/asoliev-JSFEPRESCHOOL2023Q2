@@ -46,18 +46,20 @@
   border-color: #8E8E8E;
   border-width: 1px;
   background-color: #FFF;
-  padding-top: 15px;
   margin: 0px 17px 23px;
-}
-.card-input::placeholder {
+  padding-top: 15px;
   padding-left: 20px;
-  color: #8E8E8E;
+
+  color: #000;
   font-family: Forum;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 50px; /* 166.667% */
   letter-spacing: 0.6px;
+}
+.card-input::placeholder {
+  color: #8E8E8E;
 
   opacity: 1; /* Firefox */
 }
