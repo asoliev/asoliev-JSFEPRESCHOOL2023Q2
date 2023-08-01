@@ -216,6 +216,7 @@ body {
 
   #favorites {
     #favorites-header{margin-top: -7px;}
+
     .favorites-season-title {
       color: #000;
       font-family: Inter;
@@ -225,58 +226,61 @@ body {
       line-height: normal;
       margin-bottom: 37px;
     }
-  
+
     .favorite-seasons {
-      display: flex;
       width: 700px;
 
-      .favorites-season-label {
+      .favorite-seasons-fieldset {
+        padding: 0px;
         display: flex;
-        align-items: center;
-        margin-right: 80px;
-        margin-bottom: 35px;
-        padding: 5px;
+        border: none;
 
-        color: #000;
-        font-family: Inter;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-      .favorites-season-label:first-child {
-        padding-left: 0px;
-      }
-      .favorites-season-label:hover {
-        cursor: pointer;
-        color: #BB945F;
-      }
-      .favorites-season-label > input:checked+span {
-        font-weight: 700;
-      }
+        .favorites-season-label {
+          display: flex;
+          align-items: center;
+          margin-right: 80px;
+          margin-bottom: 35px;
+          padding: 5px;
   
-      .favorites-season-radio {
-        position: relative;
-        appearance: none;
-        border: 2px solid #000;
-        border-radius: 50%;
-        margin-right: 20px;
-        width: 17px;
-        height: 17px;
-      }
-      .favorites-season-radio:hover{cursor: pointer;}
-      .favorites-season-radio:checked::before {
-        content: "";
-        position: absolute;
-        width: 8.5px;
-        height: 8.5px;
-        border-radius: 100%;
+          color: #000;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .favorites-season-label:first-of-type{padding-left: 0px;}
+        .favorites-season-label:hover {
+          cursor: pointer;
+          color: #BB945F;
+        }
+        .favorites-season-label > input:checked+span {
+          font-weight: 700;
+        }
   
-        background-color: #000;
-        transform: translate(-50%, -50%);
-  
-        top: 50%;
-        left: 50%;
+        .favorites-season-radio {
+          position: relative;
+          appearance: none;
+          border: 2px solid #000;
+          border-radius: 50%;
+          margin-right: 20px;
+          width: 17px;
+          height: 17px;
+        }
+        .favorites-season-radio:hover{cursor: pointer;}
+        .favorites-season-radio:checked::before {
+          content: "";
+          position: absolute;
+          width: 8.5px;
+          height: 8.5px;
+          border-radius: 100%;
+    
+          background-color: #000;
+          transform: translate(-50%, -50%);
+    
+          top: 50%;
+          left: 50%;
+        }
       }
     }
 
@@ -294,57 +298,59 @@ body {
         height: 555px;
         position: relative;
         border: 1px solid #000;
+        padding-top: 20px;
         padding-left: 20px;
         padding-bottom: 15px;
-      }
-      .favorites-items-staff-picks {
-        font-family: 'Forum';
-        font-size: 20px;
-        font-weight: 400;
-        letter-spacing: 2px;
-        padding-top: 25px;
-        padding-bottom: 10px;
-      }
-      .favorites-items-hr {
-        width: 60px;
-        background-color: #BB945F;
-        border: none;
-        height: 1px;
-      }
-      .favorites-items-header {
-        font-size: 15px;
-        line-height: 40px; /* 266.667% */
-        letter-spacing: 2px;
-        margin: 15px 0px 20px;
-        height: 80px;
-  
-        color: #000;
-        font-family: Inter;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 40px; /* 266.667% */
-        letter-spacing: 2px;
-      }
-      .favorites-items-title {text-transform: uppercase;}
-      .favorites-items-text {
-        color: #000;
-        font-family: Inter;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 40px; /* 266.667% */
-        letter-spacing: 2px;
-        text-transform: capitalize;
-  
-        width: 357px;
-        height: 320px;
-        flex-grow: 1;
-      }
-      .favorites-items-box-img {
-        position: absolute;
-        right: -40px;
-        bottom: -1px;
+
+        .favorites-items-staff-picks {
+          font-family: 'Forum';
+          font-size: 20px;
+          font-weight: 400;
+          letter-spacing: 2px;
+          margin-bottom: 10px;
+        }
+        .favorites-items-hr {
+          width: 60px;
+          background-color: #BB945F;
+          border: none;
+          height: 1px;
+          margin-bottom: 18px;
+        }
+        .favorites-items-header {
+          font-size: 15px;
+          line-height: 40px; /* 266.667% */
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+          height: 80px;
+    
+          color: #000;
+          font-family: Inter;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 40px; /* 266.667% */
+          letter-spacing: 2px;
+        }
+        .favorites-items-title {text-transform: uppercase;}
+        .favorites-items-text {
+          color: #000;
+          font-family: Inter;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 40px; /* 266.667% */
+          letter-spacing: 2px;
+          text-transform: capitalize;
+    
+          width: 357px;
+          height: 320px;
+          flex-grow: 1;
+        }
+        .favorites-items-box-img {
+          position: absolute;
+          right: -40px;
+          bottom: -1px;
+        }
       }
     }
   }
