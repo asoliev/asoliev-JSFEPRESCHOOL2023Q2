@@ -176,11 +176,12 @@ body {
     .image-items {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
     .carousel-container {
       display: flex;
       justify-content: center;
+      height: 28px;
   
       .carousel-radio-label {padding: 5px;}
       .carousel-radio-label:hover{cursor: pointer;}
@@ -505,7 +506,6 @@ body {
       width: 600px;
 
       .find-card-title {
-        margin: 0px;
         color: #000;
         font-family: Inter;
         font-size: 30px;
@@ -526,12 +526,12 @@ body {
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
         .card-bg {
-          padding-top: 20px;
+          padding-top: 15px;
           background-color: #BB945F;
 
           .card-bg-title {
             margin-left: 18px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
           
             color: #000;
             font-family: Forum;
@@ -548,8 +548,7 @@ body {
             border-color: #8E8E8E;
             border-width: 1px;
             background-color: #FFF;
-            margin: 0px 17px 23px;
-            padding-top: 15px;
+            margin: 0px 20px 25px;
             padding-left: 20px;
           
             color: #000;
@@ -565,12 +564,13 @@ body {
           
             opacity: 1; /* Firefox */
           }
+          /* .card-input:focus{background-color: #8E8E8E;} */
         }
 
         .check-card-button {
           width: 242px;
           height: 44px;
-          margin: 26px auto 30px;
+          margin: 20px auto 30px;
 
           background-color: #FFF;
           border-radius: 2px;
