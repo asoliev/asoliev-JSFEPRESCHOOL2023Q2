@@ -8,12 +8,13 @@
 
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media.css">
 
   <link rel="icon" href="assets/favicon.ico">
   <script src="index.js"></script>
 </head>
 
-<body>
+<body class="body">
 
   <header class="header">
     <h1 class="header-title">Brooklyn Public Library</h1>
@@ -30,13 +31,21 @@
         </ul>
       </nav>
 
-      <a href="#" class="profile-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
-            fill="white" />
-        </svg>
-      </a>
+      <div class="profile-and-menu-icon">
+        <a href="#" class="profile-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
+              fill="white" />
+          </svg>
+        </a>
+
+        <div class="burger-menu" onclick="burgerClick()">
+          <div class="burger-menu-line line1"></div>
+          <div class="burger-menu-line line2"></div>
+          <div class="burger-menu-line line3"></div>
+        </div>
+      </div>
 
      </div>
 
@@ -56,10 +65,10 @@
       <hr class="sections-hr">
       <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
 
-      <div class="image-items">
-        <img src="assets/img/image1.jpg" alt="image1" class="image-item">
-        <img src="assets/img/image2.jpg" alt="image2" class="image-item">
-        <img src="assets/img/image3.jpg" alt="image3" class="image-item">
+      <div class="carousel-slides">
+        <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
+        <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
+        <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
       </div>
 
       <form class="carousel-container">
@@ -81,8 +90,8 @@
     <section class="section" id="favorites">
       <h2 class="section-header" id="favorites-header">Favorites</h2>
       <hr class="sections-hr">
-      <form class="favorite-seasons">
-        <fieldset class="favorite-seasons-fieldset">
+      <form class="favorites-seasons">
+        <fieldset class="favorites-seasons-fieldset">
           <legend class="favorites-season-title">Pick favorites of season</legend>
           <label for="winter" class="favorites-season-label">
             <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio" checked>
@@ -105,7 +114,7 @@
           </label>
         </fieldset>
       </form>
-  
+
       <div class="favorites-items">
         <div class="favorites-items-box" id="first-book">
           <h4 class="favorites-items-staff-picks">Staff Picks</h4>
@@ -290,6 +299,7 @@
     <section class="section contacts-section" id="contacts">
       <h2 class="section-header section-header-contacts">Our Contacts</h2>
       <hr class="sections-hr">
+
       <div class="contacts-innerbox">
         <div class="contact-information">
           <div class="phone-info">
@@ -307,7 +317,7 @@
           </div>
         </div>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s" width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s" width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contacts-map"></iframe>
       </div>
     </section>
 
