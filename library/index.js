@@ -1,4 +1,4 @@
-function selfMark() {
+function selfMark(){
   const valid_layout = `
   1. Вёрстка валидная +10
     - для проверки валидности вёрстки используйте сервис https://validator.w3.org/
@@ -75,8 +75,46 @@ function selfMark() {
 
   console.log(str);
 }
-//selfMark();
+selfMark();
 
-function burgerClick() {
-  //document.body.classList.toggle('');
+function burgerMenuBehaviour(){
+  const burgerMenu = document.querySelector('.burger-menu');
+  const headerNav = document.querySelector('.nav');
+  const headerItem = headerNav.querySelectorAll('a');
+
+
+  function preventScroll(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
+  }
+
+  function disableScroll(){
+    document.querySelector('.body').addEventListener('wheel', preventScroll);
+  }
+
+  function enableScroll(){
+      document.querySelector('.body').removeEventListener('wheel', preventScroll);
+  }
+
+
+  const toggleClass = (element, className) => element.classList.toggle(className);
+
+  burgerMenu.addEventListener('click', () => {
+    toggleClass(burgerMenu, 'burger-menu-opened');
+    toggleClass(headerNav, 'nav-burger');
+  })
+
+  const closeMenu = () => {
+    burgerMenu.classList.remove('burger-menu-opened');
+    headerNav.classList.remove('nav-burger');
+  }
+
+  headerItem.forEach((e) => e.addEventListener('click', closeMenu));
+
+  document.body.addEventListener('click', (event) => {
+    if (!burgerMenu.contains(event.target)) closeMenu();
+  });
 }
+burgerMenuBehaviour();
