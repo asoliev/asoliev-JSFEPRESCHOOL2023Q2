@@ -14,6 +14,8 @@ html{scroll-behavior: smooth;}
   width: 100%;
   box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3), 5px 0 5px rgba(0, 0, 0, 0.3);
 
+  .disable-scroll{overflow-y: hidden;}
+
   .button {
     width: 75px;
     height: 30px;
@@ -103,7 +105,8 @@ html{scroll-behavior: smooth;}
         width: 45px;
         height: 1px;
         border: 1px solid #FFF;
-        margin-bottom: 10px;
+        margin-top: 2px;
+        margin-bottom: 8px;
       }
     }
 
@@ -374,7 +377,8 @@ html{scroll-behavior: smooth;}
 
     #coffee-shop {
       .coffee-shop-text{
-        margin: 40px 0px;
+        margin-bottom: 40px;
+
         color: #000;
         font-family: Inter;
         font-size: 20px;
@@ -404,7 +408,7 @@ html{scroll-behavior: smooth;}
           display: flex;
           flex-direction: column;
           align-self: end;
-          width: 482px;
+          width: 464px;
         }
 
         .coffee-shop-menu-right-header {
@@ -419,11 +423,11 @@ html{scroll-behavior: smooth;}
           align-items: center;
           margin-top: 40px;
         }
-    
+
         .coffee-shop-menu-name {
-          margin: 0px 60px 0px 0px;
+          margin-right: 60px;
           width: 200px;
-    
+
           color: #000;
           font-family: Inter;
           font-size: 20px;
@@ -433,23 +437,23 @@ html{scroll-behavior: smooth;}
           letter-spacing: 2px;
           text-transform: capitalize;
         }
-    
+
         .coffee-shop-menu-right-name {
           text-align: end;
           width: 212px;
         }
-    
+
         .coffee-shop-menu-line {
           width: 100px;
           height: 1px;
           background-color: #BB945F;
           border-width: 0;
-          margin: 0px 60px 0px 0px;
+          margin-right: 60px;
         }
-    
+
         .coffee-shop-menu-price { 
           margin: 0px;
-    
+
           color: #000;
           font-family: Forum;
           font-size: 20px;
@@ -633,10 +637,10 @@ html{scroll-behavior: smooth;}
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.6px;
+
+          margin-bottom: 35px;
         }
         .get-card-text {
-          margin-top: 35px;
-        
           color: #000;
           text-align: right;
           font-family: Inter;
@@ -645,25 +649,27 @@ html{scroll-behavior: smooth;}
           font-weight: 400;
           line-height: 40px; /* 200% */
           letter-spacing: 0.4px;
+
+          margin-bottom: 35px;
         }
         .get-card-buttons {
             display: flex;
             justify-content: end;
             column-gap: 20px;
-        }
-        .get-card-btn {
-          margin-top: 35px;
-          width: 75px;
-          height: 30px;
-        
-          color: #0C0C0E;
-          text-align: center;
-          font-family: Inter;
-          font-size: 10px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: 1px;
+
+            .get-card-btn {
+              width: 75px;
+              height: 30px;
+
+              color: #0C0C0E;
+              text-align: center;
+              font-family: Inter;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 1px;
+            }
         }
       }
     }
