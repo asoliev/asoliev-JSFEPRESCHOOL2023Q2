@@ -1,16 +1,13 @@
-@media (max-width: 1440px) {
-  /* .carousel-slides {
-    flex-direction: column;
-    align-items: center;
-  } */
-  .slide-1 {
-    margin: 0 auto;
+@media (max-width: 1439px) {
+  .body {
+    .main {
+      #about {
+        .carousel-slides{margin-bottom: 20px;}
+      }
+    }
   }
-  .slide-2,
-  .slide-3
-  {
-    display: none;
-  }
+  .slide-1{margin: 0 auto;}
+  .slide-2, .slide-3{display: none;}
 }
 @media (max-width: 1255px) {
   .body {
@@ -34,7 +31,12 @@
         row-gap: 20px;
 
         .get-card {
-          .get-card-title, .get-card-text{text-align: center;}
+          width: 600px;
+
+          .get-card-title, .get-card-text{
+            text-align: center;
+            margin-bottom: 40px;
+          }
           .get-card-buttons{justify-content: center;}
         }
       }
@@ -43,55 +45,71 @@
 }
 @media (max-width: 1024px) {
   .body {
+
     .header {
       position: relative;
+
       .nav-wrapper {
-        flex-direction: column-reverse;
-        justify-content: start;
-        row-gap: 44px;
-
-        z-index: 1;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-        /* padding-top: 100px; */
-        padding: 20px;
-        width: 332px;
-        height: 570px;
-        background-color: #000;
-
         .burger-menu{display: block;}
-        .burger-menu:hover {
+
+        .burger-menu-opened {
           .line2 {
             display: none;
           }
           .line1 {
-            transform: rotate(45deg) translate(7px, 12.5px);
+            transform: rotate(45deg) translate(5px, 13px);
           }
           .line3 {
-            transform: rotate(-45deg) translate(-5px, -2px);
+            transform: rotate(-45deg) translate(-7px, -3px);
           }
         }
+        .nav {display: none;}
+        .nav-burger{
+          display: block;
+          flex-direction: column-reverse;
+          justify-content: start;
+          row-gap: 44px;
 
-        /* .nav{display: none;} */
-        .nav-list {
-          flex-direction: column;
-          row-gap: 30px;
-          align-items: center;
+          /* transition: height .5s ease-in-out; */
+          z-index: 1;
+          position: absolute;
+          top: 90px;
+          right: 10px;
+
+          /* padding-top: 100px; */
+          padding: 20px;
+          width: 332px;
+          height: 490px;
+          background-color: #000;
+
+          .nav-list {
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+          }
+
+          .nav-item{margin: 0px;}
         }
-        .nav-item{margin: 0px;}
 
         .profile-and-menu-icon {
           display: flex;
           justify-content: end;
-          width: 312px;
-          height: 35px;
+          height: 30px;
+          margin-right: -3px;
         }
       }
     }
-  }
-  .coffee-shop-menus {
-    flex-direction: column;
+
+    .main {
+      #coffee-shop {
+        .coffee-shop-text{width: 732px;}
+
+        .coffee-shop-menus {
+          flex-direction: column;
+          row-gap: 40px;
+        }
+      }
+    }
+
   }
 }
