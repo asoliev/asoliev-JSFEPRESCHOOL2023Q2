@@ -1,0 +1,172 @@
+/*carousel-slides*/
+@media (max-width: 1439px) {
+  .body {
+    .main {
+      #about {
+        .carousel-slides{
+          margin-bottom: 20px;
+          width: 614px;
+          .slide-arrow{
+            display: block;
+            cursor: pointer;
+            padding-top: 45px;
+          }
+        }
+        .carousel-container {
+          .carousel-radio-hide {display: block;}
+        }
+      }
+    }
+  }
+  .slide-1{margin: 0 auto;}
+  .slide-2, .slide-3{display: none;}
+}
+
+/*strange changes*/
+@media (max-width: 1255px) {
+  .body {
+    .main {
+      #favorites {
+        .favorites-items {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      #contacts {
+        .contacts-innerbox {
+          flex-direction: column;
+          row-gap: 100px;
+        }
+        .contacts-map{padding: 0px 20px;}
+      }
+      .library-card-body {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        .get-card {
+          width: 600px;
+
+          .get-card-title, .get-card-text{
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          .get-card-buttons{justify-content: center;}
+        }
+      }
+    }
+  }
+}
+
+/*burger-menu*/
+@media (max-width: 1024px) {
+  .body {
+
+    .header {
+      position: relative;
+
+      .nav-wrapper {
+        .burger-menu{display: block;}
+
+        .burger-menu-opened {
+          .line2 {
+            display: none;
+          }
+          .line1 {
+            transform: rotate(45deg) translate(5px, 13px);
+          }
+          .line3 {
+            transform: rotate(-45deg) translate(-7px, -3px);
+          }
+        }
+        .nav {display: none;}
+        .nav-burger{
+          display: block;
+          flex-direction: column-reverse;
+          justify-content: start;
+          row-gap: 44px;
+
+          /* transition: height .5s ease-in-out; */
+          z-index: 1;
+          position: absolute;
+          top: 90px;
+          right: 10px;
+
+          /* padding-top: 100px; */
+          padding: 20px;
+          width: 332px;
+          height: 490px;
+          background-color: #000;
+
+          .nav-list {
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+          }
+
+          .nav-item{margin: 0px;}
+        }
+
+        .profile-and-menu-icon {
+          display: flex;
+          justify-content: end;
+          height: 30px;
+          margin-right: -3px;
+        }
+      }
+    }
+
+    .main {
+      #coffee-shop {
+        .coffee-shop-text{width: 732px;}
+
+        .coffee-shop-menus {
+          flex-direction: column;
+          row-gap: 40px;
+        }
+      }
+    }
+
+  }
+}
+
+/*contacts-map width*/
+@media (max-width: 768px) {
+  .body {
+    .main {
+      .contacts-innerbox {
+        .contacts-map {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*coffee-shop-text width*/
+@media (max-width: 760px) {
+  .body {
+    .main {
+      #coffee-shop {
+        .coffee-shop-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*radio wrap*/
+@media (max-width: 730px) {
+  .body {
+    .main {
+      #favorites {
+        .favorites-seasons {
+          .favorites-seasons-fieldset {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}
