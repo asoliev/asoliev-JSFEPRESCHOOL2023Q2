@@ -1,14 +1,28 @@
+/*carousel-slides*/
 @media (max-width: 1439px) {
   .body {
     .main {
       #about {
-        .carousel-slides{margin-bottom: 20px;}
+        .carousel-slides{
+          margin-bottom: 20px;
+          width: 614px;
+          .slide-arrow{
+            display: block;
+            cursor: pointer;
+            padding-top: 45px;
+          }
+        }
+        .carousel-container {
+          .carousel-radio-hide {display: block;}
+        }
       }
     }
   }
   .slide-1{margin: 0 auto;}
   .slide-2, .slide-3{display: none;}
 }
+
+/*strange changes*/
 @media (max-width: 1255px) {
   .body {
     .main {
@@ -43,6 +57,8 @@
     }
   }
 }
+
+/*burger-menu*/
 @media (max-width: 1024px) {
   .body {
 
@@ -111,5 +127,46 @@
       }
     }
 
+  }
+}
+
+/*contacts-map width*/
+@media (max-width: 768px) {
+  .body {
+    .main {
+      .contacts-innerbox {
+        .contacts-map {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*coffee-shop-text width*/
+@media (max-width: 760px) {
+  .body {
+    .main {
+      #coffee-shop {
+        .coffee-shop-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*radio wrap*/
+@media (max-width: 730px) {
+  .body {
+    .main {
+      #favorites {
+        .favorites-seasons {
+          .favorites-seasons-fieldset {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
   }
 }

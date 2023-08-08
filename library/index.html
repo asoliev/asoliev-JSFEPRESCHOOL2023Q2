@@ -52,7 +52,7 @@
 
   <main class="main">
 
-    <section class="main-section" id="welcome">
+    <section id="welcome">
       <div class="welcome-overlay"></div>
       <div class="welcome-bg">
         <h3 class="welcome-bg-text">Welcome&nbsp;<br> to the Brooklyn <br> Library</h3>
@@ -60,14 +60,32 @@
     </section>
 
     <section class="section" id="about">
+
       <h2 class="section-header">About</h2>
       <hr class="sections-hr">
+
       <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
 
       <div class="carousel-slides">
-        <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
-        <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
-        <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
+
+        <div class="slide-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="carousel-slides-inner-box">
+          <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
+          <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
+          <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
+        </div>
+
+        <div class="slide-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
       </div>
 
       <form class="carousel-container">
@@ -83,7 +101,16 @@
           <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
         </label>
 
+        <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
+          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
+        </label>
+
+        <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
+          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
+        </label>
+
       </form>
+
     </section>
 
     <section class="section" id="favorites">
@@ -295,7 +322,7 @@
       </div>
     </section>
 
-    <section class="section contacts-section" id="contacts">
+    <section class="section" id="contacts">
       <h2 class="section-header section-header-contacts">Our Contacts</h2>
       <hr class="sections-hr">
 

@@ -192,7 +192,14 @@ html{scroll-behavior: smooth;}
       .carousel-slides {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 35px;
+        align-items: center;
+        margin: 0px auto 35px;
+
+        .carousel-slides-inner-box {
+          display: flex;
+          justify-content: space-between;
+        }
+        .slide-arrow{display: none;}
       }
       .carousel-image {
         max-width: 450px;
@@ -201,10 +208,11 @@ html{scroll-behavior: smooth;}
         display: flex;
         justify-content: center;
         height: 28px;
-    
+
         .carousel-radio-label {padding: 5px;}
         .carousel-radio-label:hover{cursor: pointer;}
-    
+        .carousel-radio-hide{display: none;}
+
         .carousel-radio-group {
           visibility: hidden;
           position: relative;
@@ -213,7 +221,7 @@ html{scroll-behavior: smooth;}
           width: 16px;
           height: 16px;
         }
-    
+
         .carousel-radio-group:before {
           content: "";
           visibility: visible;
@@ -228,7 +236,7 @@ html{scroll-behavior: smooth;}
           bottom: 0;
           left: 0;
         }
-    
+
         .carousel-radio-group:checked:before{background-color: #BB945F;}
       }
     }
@@ -494,7 +502,7 @@ html{scroll-behavior: smooth;}
         margin-bottom: 40px;
       }
       .phone-info{margin-bottom: 40px;}
-      .phone-info-list{padding: 0px;}
+      /* .phone-info-list{padding: 0px;} */
       .phone-info-item {
         margin-bottom: 20px;
         list-style: none;
@@ -505,7 +513,7 @@ html{scroll-behavior: smooth;}
       }
       .phone-info-link:hover{color:#BB945F}
   
-      .email-info-list{padding: 0px;}
+      /* .email-info-list{padding: 0px;} */
       .email-info-item {
         margin-bottom: 20px;
         list-style: none;
