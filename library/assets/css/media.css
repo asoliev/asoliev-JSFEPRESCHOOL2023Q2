@@ -69,45 +69,39 @@
         .burger-menu{display: block;}
 
         .burger-menu-opened {
-          .line2 {
-            display: none;
-          }
-          .line1 {
-            transform: rotate(45deg) translate(5px, 13px);
-          }
-          .line3 {
-            transform: rotate(-45deg) translate(-7px, -3px);
-          }
+          .line1{transform: rotate(45deg) translate(9px, 10px);}
+          .line2{opacity: 0;}
+          .line3{transform: rotate(-45deg) translate(3px, -6px);}
         }
-        .nav {display: none;}
-        .nav-burger{
-          display: block;
-          flex-direction: column-reverse;
-          justify-content: start;
-          row-gap: 44px;
 
-          /* transition: height .5s ease-in-out; */
+        .nav {
           z-index: 1;
-          position: absolute;
-          top: 90px;
-          right: 10px;
 
-          /* padding-top: 100px; */
+          /* flex-direction: column-reverse;
+          justify-content: start;
+          row-gap: 44px; */
+
           padding: 20px;
           width: 332px;
           height: 490px;
-          background-color: #000;
+          background-color: #0C0C0E;
 
-          .nav-list {
-            flex-direction: column;
-            row-gap: 30px;
-            align-items: center;
-          }
-
-          .nav-item{margin: 0px;}
+          position: absolute;
+          top: -600px;
+          right: -1px;
+          transition: all .7s ease;
         }
+        .nav-burger{top: 80px;}
+
+        .nav-list {
+          flex-direction: column;
+          row-gap: 30px;
+          align-items: center;
+        }
+        .nav-item{margin: 0px;}
 
         .profile-and-menu-icon {
+          z-index: 2;
           display: flex;
           justify-content: end;
           height: 30px;
