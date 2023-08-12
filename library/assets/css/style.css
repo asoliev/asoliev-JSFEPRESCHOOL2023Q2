@@ -14,8 +14,6 @@ html{scroll-behavior: smooth;}
   width: 100%;
   box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3), 5px 0 5px rgba(0, 0, 0, 0.3);
 
-  .disable-scroll{overflow-y: hidden;}
-
   .button {
     width: 75px;
     height: 30px;
@@ -74,12 +72,8 @@ html{scroll-behavior: smooth;}
         align-content: center;
         list-style: none;
       }
-      .nav-item {
-        margin-right: 30px;
-      }
-      .nav-item:last-child {
-        margin-right: 0px;
-      }
+      .nav-item{margin-right: 30px;}
+      .nav-item:last-child{margin-right: 0px;}
       .nav-link {
         color: #FFF;
         font-family: Inter;
@@ -107,6 +101,7 @@ html{scroll-behavior: smooth;}
         border: 1px solid #FFF;
         margin-top: 2px;
         margin-bottom: 8px;
+        transition: all 1s ease;
       }
     }
 
