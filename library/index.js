@@ -82,23 +82,6 @@ function burgerMenuBehaviour(){
   const headerNav = document.querySelector('.nav');
   const headerItem = headerNav.querySelectorAll('a');
 
-
-  function preventScroll(e){
-    e.preventDefault();
-    e.stopPropagation();
-
-    return false;
-  }
-
-  function disableScroll(){
-    document.querySelector('.body').addEventListener('wheel', preventScroll);
-  }
-
-  function enableScroll(){
-      document.querySelector('.body').removeEventListener('wheel', preventScroll);
-  }
-
-
   const toggleClass = (element, className) => element.classList.toggle(className);
 
   burgerMenu.addEventListener('click', () => {
@@ -106,6 +89,7 @@ function burgerMenuBehaviour(){
     toggleClass(headerNav, 'nav-burger');
   })
 
+  
   const closeMenu = () => {
     burgerMenu.classList.remove('burger-menu-opened');
     headerNav.classList.remove('nav-burger');
@@ -114,7 +98,8 @@ function burgerMenuBehaviour(){
   headerItem.forEach((e) => e.addEventListener('click', closeMenu));
 
   document.body.addEventListener('click', (event) => {
-    if (!burgerMenu.contains(event.target)) closeMenu();
+    if (!burgerMenu.contains(event.target) && !headerNav.contains(event.target))
+      closeMenu();
   });
 }
 burgerMenuBehaviour();
