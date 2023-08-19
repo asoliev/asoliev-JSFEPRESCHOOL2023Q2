@@ -107,6 +107,8 @@ html{scroll-behavior: smooth;}
 
     .profile-icon {
       margin-left: 40px;
+      background-color: transparent;
+      border: none;
     }
     .profile-svg {
       padding-right: 20px;
@@ -188,56 +190,76 @@ html{scroll-behavior: smooth;}
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0px auto 35px;
+        margin: 0px auto;
 
         .carousel-slides-inner-box {
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          row-gap: 40px;
+          .carousel-slides-image-box {
+            overflow-x: hidden;
+            max-width: 1400px;
+            .carousel-slides-images {
+              transition: all ease 0.5s;
+              display: flex;
+              justify-content: space-between;
+              column-gap: 25px;
+
+              .carousel-image {
+                max-width: 450px;
+              }
+            }
+          }
+          .carousel-dots {
+            display: flex;
+            justify-content: center;
+            /* height: 28px; */
+    
+            .carousel-radio-label {padding: 5px;}
+            .carousel-radio-label:hover{cursor: pointer;}
+            .carousel-radio-hide{display: none;}
+    
+            .carousel-radio-group {
+              visibility: hidden;
+              position: relative;
+              cursor: pointer;
+        
+              width: 16px;
+              height: 16px;
+            }
+    
+            .carousel-radio-group:before {
+              content: "";
+              visibility: visible;
+              position: absolute;
+          
+              border: none;
+              border-radius: 50%;
+              background-color: #0C0C0E;
+        
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            }
+    
+            .carousel-radio-group:checked:before{background-color: #BB945F;}
+          }
         }
-        .slide-arrow{display: none;}
-      }
-      .carousel-image {
-        max-width: 450px;
-      }
-      .carousel-container {
-        display: flex;
-        justify-content: center;
-        height: 28px;
-
-        .carousel-radio-label {padding: 5px;}
-        .carousel-radio-label:hover{cursor: pointer;}
-        .carousel-radio-hide{display: none;}
-
-        .carousel-radio-group {
-          visibility: hidden;
-          position: relative;
+        .slide-arrow{
+          display: none;
           cursor: pointer;
-    
-          width: 16px;
-          height: 16px;
-        }
-
-        .carousel-radio-group:before {
-          content: "";
-          visibility: visible;
-          position: absolute;
-      
+          background-color: transparent;
           border: none;
-          border-radius: 50%;
-          background-color: #0C0C0E;
-    
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
         }
-
-        .carousel-radio-group:checked:before{background-color: #BB945F;}
+        .slide-arrow:disabled {
+          cursor: default;
+        }
       }
     }
 
     #favorites {
-      #favorites-header{margin-top: -7px;}
+      #favorites-header{margin-top: -15px;}
 
       .favorites-seasons {
         width: 700px;

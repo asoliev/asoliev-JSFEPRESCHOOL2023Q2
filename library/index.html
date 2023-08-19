@@ -31,13 +31,13 @@
       </nav>
 
       <div class="profile-and-menu-icon">
-        <a href="#" class="profile-icon">
+        <button tittle="Profile" class="profile-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
               fill="white" />
           </svg>
-        </a>
+        </button>
 
         <div class="burger-menu">
           <div class="burger-menu-line line1"></div>
@@ -68,48 +68,57 @@
 
       <div class="carousel-slides">
 
-        <div class="slide-arrow">
+        <button title="Previous slide" data-slide-btn="prev" class="slide-arrow" onclick="prevSlide()" disabled>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </button>
 
         <div class="carousel-slides-inner-box">
-          <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
-          <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
-          <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
+
+          <div class="carousel-slides-image-box">
+            <div class="carousel-slides-images">
+              <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
+              <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
+              <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
+              <img src="assets/img/image4.jpg" alt="image3" class="carousel-image slide-3">
+              <img src="assets/img/image5.jpg" alt="image3" class="carousel-image slide-3">
+            </div>
+          </div>
+
+          <form class="carousel-dots">
+
+            <label for="carousel-first-radio" class="carousel-radio-label">
+              <input type="radio" id="carousel-first-radio" data-pagination="1" name="carousel-radio-group" class="carousel-radio-group" checked="checked" onchange="slideSelect(0)">
+            </label>
+
+            <label for="carousel-second-radio" class="carousel-radio-label">
+              <input type="radio" id="carousel-second-radio" data-pagination="2" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(1)">
+            </label>
+
+            <label for="carousel-third-radio" class="carousel-radio-label">
+              <input type="radio" id="carousel-third-radio" data-pagination="3" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(2)">
+            </label>
+
+            <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
+              <input type="radio" id="carousel-third-radio" data-pagination="4" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(3)">
+            </label>
+
+            <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
+              <input type="radio" id="carousel-third-radio" data-pagination="5" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(4)">
+            </label>
+
+          </form>
+
         </div>
 
-        <div class="slide-arrow">
+        <button title="Next slide" data-slide-btn="next" class="slide-arrow" onclick="nextSlide()">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </div>
+        </button>
 
       </div>
-
-      <form class="carousel-container">
-        <label for="carousel-first-radio" class="carousel-radio-label">
-          <input type="radio" id="carousel-first-radio" name="carousel-radio-group" class="carousel-radio-group" checked="checked">
-        </label>
-
-        <label for="carousel-second-radio" class="carousel-radio-label">
-          <input type="radio" id="carousel-second-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-        <label for="carousel-third-radio" class="carousel-radio-label">
-          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-        <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
-          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-        <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
-          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-      </form>
 
     </section>
 

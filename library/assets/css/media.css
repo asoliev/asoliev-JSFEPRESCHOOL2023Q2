@@ -4,22 +4,25 @@
     .main {
       #about {
         .carousel-slides{
-          margin-bottom: 20px;
           width: 614px;
           .slide-arrow{
             display: block;
-            cursor: pointer;
-            padding-top: 45px;
           }
-        }
-        .carousel-container {
-          .carousel-radio-hide {display: block;}
+          .carousel-slides-inner-box{
+            row-gap: 20px;
+            .carousel-slides-image-box {
+              max-width: 450px;
+              /* .carousel-slides-images {column-gap: 0px;} */
+            }
+            .carousel-dots {
+              .carousel-radio-hide {display: block;}
+            }
+          }
         }
       }
     }
   }
   .slide-1{margin: 0 auto;}
-  .slide-2, .slide-3{display: none;}
 }
 
 /*strange changes*/
@@ -132,6 +135,10 @@
         .contacts-map {
           width: 100%;
         }
+      }
+
+      #favorites {
+        #favorites-header{margin-top: -10px;}
       }
     }
   }
