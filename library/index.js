@@ -1,6 +1,5 @@
 function markWork() {
   const lib3MarkStep1 = `
-
   Этап 1: Пользователь не зарегистрирован
 
   - Ограниченная карусель в блоке About
@@ -27,7 +26,6 @@ function markWork() {
 
   `;
   const lib3MarkStep2 = `
-
   Этап 2: Пользователь на этапе регистрации
 
   - Меню авторизации при нажатии на иконку пользователя
@@ -58,7 +56,6 @@ function markWork() {
 
   `;
   const lib3MarkStep3 = `
-
   Этап 3: Пользователь на этапе входа в учетную запись после регистрации.
 
   - Модальное окно LOGIN
@@ -75,7 +72,6 @@ function markWork() {
 
   `;
   const lib3MarkStep4 = `
-
   Этап 4: Пользователь после входа в учетную запись
 
   - Меню профиля при нажатии на иконку с инициалами пользователя
@@ -117,6 +113,7 @@ function markWork() {
 
   const libMark = `
   1. Library#1 - Фиксированная вёрстка
+
     1.1. Вёрстка валидная +10
     1.2. Вёрстка семантическая +16
     1.3. Вёрстка соответствует макету +54
@@ -124,14 +121,20 @@ function markWork() {
 
   Максимальная оценка за задание 100 баллов
 
+
+
   2. Library#2 - Адаптивная вёрстка
+
     2.1 Вёрстка соответствует макету. Ширина экрана 768px +26
     2.2 Ни на одном из разрешений до 640px включительно не появляется горизонтальная полоса прокрутки. +12
     2.3 На ширине экрана 768рх реализовано адаптивное меню +12
 
   Максимальная оценка за задание 50 баллов
 
+
+
   3. Library#3
+
     ${lib3MarkStep1}
     ${lib3MarkStep2}
     ${lib3MarkStep3}
@@ -141,6 +144,8 @@ function markWork() {
 
   console.log(libMark);
 }
+markWork();
+
 
 function burgerMenuBehaviour(){
   const burgerMenu = document.body.querySelector('.burger-menu');
@@ -169,55 +174,118 @@ function burgerMenuBehaviour(){
 }
 burgerMenuBehaviour();
 
-const slideImages = document.body.querySelector('.carousel-slides-images');
-const prevBtn = document.body.querySelector('.carousel-slides-images');
-const nextBtn = document.body.querySelector('.carousel-slides-images');
-let slideImgX = 0;
-let slideCurPage = 0;
-const imgWidth = 475;
 
-function prevSlide() {
-  slideCurPage--;
-  slideMovePN();
-  checkSlideEnd();
-}
-function nextSlide() {
-  slideCurPage++;
-  slideMovePN();
-  checkSlideEnd();
-}
-function slideSelect(page) {
-  slideCurPage = page;
-  slideMove();
-}
-
-function slideMovePN() {
-  selectPageDot();
-  slideMove();
-}
-function slideMove() {
-  slideImgX = -imgWidth * slideCurPage;
-  slideImages.style.transform = `translateX(${slideImgX}px)`;
-}
-function selectPageDot() {
-  for (let i = 0; i < 5; i++) {
-    const carouselDot = document.body.querySelector(`[data-pagination='${i+1}']`);
-    if (i === slideCurPage) carouselDot.checked = true;
-    else carouselDot.checked = false;
-  }
-}
-function checkSlideEnd() {
+function sliderBehaviour() {
+  const slideImages = document.body.querySelector('.slider-images');
   const prevBtn = document.body.querySelector("[data-slide-btn='prev']");
   const nextBtn = document.body.querySelector("[data-slide-btn='next']");
+  const pageBtns = document.body.querySelectorAll('.slider-radio-btn');
 
-  if (slideCurPage === 0) prevBtn.disabled = true;
-  else prevBtn.disabled = false;
+  let slideImgX = 0;
+  let slideCurPage = 0;
+  const imgWidth = 475;
 
-  if (slideCurPage === 4) nextBtn.disabled = true;
-  else nextBtn.disabled = false;
+  prevBtn.addEventListener('click', () => {
+    slideCurPage--;
+    prevNextSlide();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    slideCurPage++;
+    prevNextSlide();
+  });
+
+  pageBtns.forEach(
+    (el) => el.addEventListener('change', (event) => slideSelect(event))
+  );
+
+  function prevNextSlide() {
+    selectPageDot();
+    slideMove();
+  }
+  
+  function slideSelect(event) {
+    slideCurPage = event.target.dataset.pagination;
+    slideMove();
+  }
+
+  function slideMove() {
+    slideImgX = -imgWidth * slideCurPage;
+    slideImages.style.transform = `translateX(${slideImgX}px)`;
+    checkSlideEnd();
+  }
+
+  function selectPageDot() {
+    for (let i = 0; i < 5; i++) {
+      const sliderDot = document.body.querySelector(`[data-pagination='${i}']`);
+
+      if (i === slideCurPage) sliderDot.checked = true;
+      else sliderDot.checked = false;
+    }
+  }
+
+  function checkSlideEnd() {
+    prevBtn.disabled = slideCurPage == 0;
+    nextBtn.disabled = slideCurPage == 4;
+  }
+
+  window.addEventListener('resize', (event) => {
+    slideCurPage = 0;
+    slideMove();
+    selectPageDot();
+  });
 }
+sliderBehaviour();
 
-window.addEventListener('resize', (event) => {
-  slideCurPage = 0;
-  slideMovePN();
-});
+
+function favoritesSeasonChange(params) {
+  const seasonRadios = document.body.querySelectorAll('.favorites-season-radio');
+
+  seasonRadios.forEach(
+    (el) => el.addEventListener('change', (event) => drawFavoritesSeason(el.id))
+  );
+
+  let favoriteSeasonsData;
+  async function getFavoriteSeasonsData() {
+    const response = await fetch("./assets/favorites.json");
+    return await response.json();
+  }
+  async function initFavoritesSeason() {
+    favoriteSeasonsData = await getFavoriteSeasonsData();
+    drawFavoritesSeason('winter');
+  }
+  initFavoritesSeason();
+
+  function drawFavoritesSeason(season) {
+    const favoriteItems = document.body.querySelector('.favorites-items');
+    favoriteItems.style.opacity = "0";
+
+    for (let i = 0; i < 4; i++) {
+      const favoriteItem = document.body.querySelector(`[data-favorite-book='${i}']`);
+      drawFavoritesSeasonElements(favoriteItem, season, i);
+    }
+
+    setTimeout(() => { favoriteItems.style.opacity = "1"; }, 300);
+  }
+  function drawFavoritesSeasonElements(favoriteItem, season, i) {
+    const header = favoriteItem.querySelector('.favorites-items-header');
+    header.innerHTML = `
+      <span class="favorites-items-title">
+        ${favoriteSeasonsData[season][i].title}
+      </span>
+      <br>
+      <span class="favorites-items-author">
+        By Sunyi Dean
+      </span>
+    `;
+
+    const description = favoriteItem.querySelector('.favorites-items-description');
+    description.innerHTML = favoriteSeasonsData[season][0].description;
+
+    const coverImg = favoriteItem.querySelector('.favorites-items-box-img');
+    const bookName = `book${i+1}`;
+    coverImg.src = `./assets/img/favorites/${season}/${bookName}.jpg`;
+    coverImg.alt = bookName;
+  }
+}
+favoritesSeasonChange();

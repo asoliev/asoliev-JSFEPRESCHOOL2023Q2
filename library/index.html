@@ -66,53 +66,53 @@
 
       <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
 
-      <div class="carousel-slides">
+      <div class="slider">
 
-        <button title="Previous slide" data-slide-btn="prev" class="slide-arrow" onclick="prevSlide()" disabled>
+        <button title="Previous slide" data-slide-btn="prev" class="slide-arrow" disabled>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
 
-        <div class="carousel-slides-inner-box">
+        <div class="slider-container">
 
-          <div class="carousel-slides-image-box">
-            <div class="carousel-slides-images">
-              <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
-              <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
-              <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
-              <img src="assets/img/image4.jpg" alt="image3" class="carousel-image slide-3">
-              <img src="assets/img/image5.jpg" alt="image3" class="carousel-image slide-3">
+          <div class="slider-image-box">
+            <div class="slider-images">
+              <img src="assets/img/image1.jpg" alt="image1" class="slider-image slide-1">
+              <img src="assets/img/image2.jpg" alt="image2" class="slider-image slide-2">
+              <img src="assets/img/image3.jpg" alt="image3" class="slider-image slide-3">
+              <img src="assets/img/image4.jpg" alt="image3" class="slider-image slide-3">
+              <img src="assets/img/image5.jpg" alt="image3" class="slider-image slide-3">
             </div>
           </div>
 
-          <form class="carousel-dots">
+          <form class="slider-pagination">
 
-            <label for="carousel-first-radio" class="carousel-radio-label">
-              <input type="radio" id="carousel-first-radio" data-pagination="1" name="carousel-radio-group" class="carousel-radio-group" checked="checked" onchange="slideSelect(0)">
+            <label for="slider-first-radio" class="slider-radio-label">
+              <input type="radio" id="slider-first-radio" data-pagination="0" name="slider-radio-group" class="slider-radio-btn" checked>
             </label>
 
-            <label for="carousel-second-radio" class="carousel-radio-label">
-              <input type="radio" id="carousel-second-radio" data-pagination="2" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(1)">
+            <label for="slider-second-radio" class="slider-radio-label">
+              <input type="radio" id="slider-second-radio" data-pagination="1" name="slider-radio-group" class="slider-radio-btn">
             </label>
 
-            <label for="carousel-third-radio" class="carousel-radio-label">
-              <input type="radio" id="carousel-third-radio" data-pagination="3" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(2)">
+            <label for="slider-third-radio" class="slider-radio-label">
+              <input type="radio" id="slider-third-radio" data-pagination="2" name="slider-radio-group" class="slider-radio-btn">
             </label>
 
-            <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
-              <input type="radio" id="carousel-third-radio" data-pagination="4" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(3)">
+            <label for="slider-fourth-radio" class="slider-radio-label slider-radio-hide">
+              <input type="radio" id="slider-fourth-radio" data-pagination="3" name="slider-radio-group" class="slider-radio-btn">
             </label>
 
-            <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
-              <input type="radio" id="carousel-third-radio" data-pagination="5" name="carousel-radio-group" class="carousel-radio-group" onchange="slideSelect(4)">
+            <label for="slider-fifth-radio" class="slider-radio-label slider-radio-hide">
+              <input type="radio" id="slider-fifth-radio" data-pagination="4" name="slider-radio-group" class="slider-radio-btn">
             </label>
 
           </form>
 
         </div>
 
-        <button title="Next slide" data-slide-btn="next" class="slide-arrow" onclick="nextSlide()">
+        <button title="Next slide" data-slide-btn="next" class="slide-arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -123,37 +123,47 @@
     </section>
 
     <section class="section" id="favorites">
+
       <h2 class="section-header" id="favorites-header">Favorites</h2>
       <hr class="sections-hr">
+
       <form class="favorites-seasons">
+
         <fieldset class="favorites-seasons-fieldset">
+
           <legend class="favorites-season-title">Pick favorites of season</legend>
+
           <label for="winter" class="favorites-season-label">
             <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio" checked>
             <span>Winter</span>
           </label>
-    
+
           <label for="spring" class="favorites-season-label">
-            <input type="radio" id="spring" name="favorites-season-group" class="favorites-season-radio">
+            <input type="radio" id="spring" name="favorites-season-group" class="favorites-season-radio"">
             <span>Spring</span>
           </label>
-    
+
           <label for="summer" class="favorites-season-label">
             <input type="radio" id="summer" name="favorites-season-group" class="favorites-season-radio">
             <span>Summer</span>
           </label>
-    
+
           <label for="autumn" class="favorites-season-label">
             <input type="radio" id="autumn" name="favorites-season-group" class="favorites-season-radio">
             <span>Autumn</span>
           </label>
+
         </fieldset>
+
       </form>
 
       <div class="favorites-items">
-        <div class="favorites-items-box" id="first-book">
+
+        <div class="favorites-items-box" data-favorite-book="0">
+
           <h4 class="favorites-items-staff-picks">Staff Picks</h4>
           <hr class="favorites-items-hr">
+
           <h5 class="favorites-items-header">
             <span class="favorites-items-title">
               The Book Eaters
@@ -163,18 +173,23 @@
               By Sunyi Dean
             </span>
           </h5>
-          <p class="favorites-items-text">
+
+          <p class="favorites-items-description">
             An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater
             son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance,
             and a strong, complex protagonist. Not for the faint of heart.
           </p>
+
           <button type="button" class="button">Buy</button>
-          <img src="assets/img/book1.jpg" alt="book1" class="favorites-items-box-img">
+          <img src="assets/img/favorites/winter/book1.jpg" alt="book1" class="favorites-items-box-img">
+
         </div>
-  
-        <div class="favorites-items-box" id="second-book">
+
+        <div class="favorites-items-box" data-favorite-book="1">
+
           <h4 class="favorites-items-staff-picks">Staff Picks</h4>
           <hr class="favorites-items-hr">
+
           <h5 class="favorites-items-header">
             <span class="favorites-items-title">
               Cackle
@@ -184,18 +199,23 @@
               By Rachel Harrison
             </span>
           </h5>
-          <p class="favorites-items-text">
+
+          <p class="favorites-items-description">
             Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than
             here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends
             a beautiful witch.
           </p>
+
           <button type="button" class="button">Buy</button>
-          <img src="assets/img/book2.jpg" alt="book2" class="favorites-items-box-img">
+          <img src="assets/img/favorites/winter/book2.jpg" alt="book2" class="favorites-items-box-img">
+
         </div>
-  
-        <div class="favorites-items-box" id="third-book">
+
+        <div class="favorites-items-box" data-favorite-book="2">
+
           <h4 class="favorites-items-staff-picks">Staff Picks</h4>
           <hr class="favorites-items-hr">
+
           <h5 class="favorites-items-header">
             <span class="favorites-items-title">
               Dante: Poet of the Secular World
@@ -205,18 +225,22 @@
               By Erich Auerbach
             </span>
           </h5>
-          <p class="favorites-items-text">
+
+          <p class="favorites-items-description">
             Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in
             general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into
             something of divine significance—an inspired introduction to Dante's main themes.
           </p>
+
           <button type="button" class="button">Buy</button>
-          <img src="assets/img/book3.jpg" alt="book3" class="favorites-items-box-img">
+          <img src="assets/img/favorites/winter/book3.jpg" alt="book3" class="favorites-items-box-img">
+
         </div>
-  
-        <div class="favorites-items-box" id="fourth-book">
+
+        <div class="favorites-items-box" data-favorite-book="3">
           <h4 class="favorites-items-staff-picks">Staff Picks</h4>
           <hr class="favorites-items-hr">
+
           <h5 class="favorites-items-header">
             <span class="favorites-items-title">
               The Last Queen
@@ -226,14 +250,19 @@
               By Clive Irving
             </span>
           </h5>
-          <p class="favorites-items-text">
+
+          <p class="favorites-items-description">
             A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors
             have evolved and thrived as the modern world has changed around them.
           </p>
+
           <button type="button" class="button" disabled>Own</button>
-          <img src="assets/img/book4.jpg" alt="book4" class="favorites-items-box-img">
+          <img src="assets/img/favorites/winter/book4.jpg" alt="book4" class="favorites-items-box-img">
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section" id="coffee-shop">

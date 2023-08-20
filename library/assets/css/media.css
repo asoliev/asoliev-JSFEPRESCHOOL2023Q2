@@ -1,21 +1,20 @@
-/*carousel-slides*/
+/*img-slider*/
 @media (max-width: 1439px) {
   .body {
     .main {
       #about {
-        .carousel-slides{
+        .slider{
           width: 614px;
-          .slide-arrow{
-            display: block;
-          }
-          .carousel-slides-inner-box{
+
+          .slide-arrow{display: block;}
+
+          .slider-container{
             row-gap: 20px;
-            .carousel-slides-image-box {
-              max-width: 450px;
-              /* .carousel-slides-images {column-gap: 0px;} */
-            }
-            .carousel-dots {
-              .carousel-radio-hide {display: block;}
+
+            .slider-image-box {max-width: 450px;}
+
+            .slider-pagination {
+              .slider-radio-hide {display: block;}
             }
           }
         }
