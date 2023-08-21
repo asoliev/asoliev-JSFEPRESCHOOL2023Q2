@@ -240,7 +240,6 @@ sliderBehaviour();
 
 function favoritesSeasonChange(params) {
   const seasonRadios = document.body.querySelectorAll('.favorites-season-radio');
-
   seasonRadios.forEach(
     (el) => el.addEventListener('change', (event) => drawFavoritesSeason(el.id))
   );
@@ -280,7 +279,7 @@ function favoritesSeasonChange(params) {
     `;
 
     const description = favoriteItem.querySelector('.favorites-items-description');
-    description.innerHTML = favoriteSeasonsData[season][0].description;
+    description.innerHTML = favoriteSeasonsData[season][i].description;
 
     const coverImg = favoriteItem.querySelector('.favorites-items-box-img');
     const bookName = `book${i+1}`;

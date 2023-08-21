@@ -137,7 +137,22 @@
       }
 
       #favorites {
+        position: relative;
         #favorites-header{margin-top: -10px;}
+        #favorites-hr{margin-bottom: 30px;}
+        .favorites-seasons {
+          position: sticky;
+          top: 0px;
+          background-color: #FFF;
+          z-index: 1;
+          padding-top: 10px;
+          .favorites-seasons-fieldset {
+            .favorites-season-label {margin-bottom: 10px;}
+          }
+        }
+        .favorites-items {
+          margin-top: 22px;
+        }
       }
     }
   }
