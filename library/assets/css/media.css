@@ -102,13 +102,14 @@
         }
         .nav-item{margin: 0px;}
 
-        .profile-and-menu-icon {
+        .profile-and-burger-icon {
           z-index: 2;
           display: flex;
           justify-content: end;
           height: 30px;
           margin-right: -3px;
         }
+        .profile-menu{right: 75px;}
       }
     }
 
@@ -130,14 +131,8 @@
 @media (max-width: 768px) {
   .body {
     .main {
-      .contacts-innerbox {
-        .contacts-map {
-          width: 100%;
-        }
-      }
-
+      #welcome{background-image: url("../img/welcome768.jpg");}
       #favorites {
-        position: relative;
         #favorites-header{margin-top: -10px;}
         #favorites-hr{margin-bottom: 30px;}
         .favorites-seasons {
@@ -150,9 +145,10 @@
             .favorites-season-label {margin-bottom: 10px;}
           }
         }
-        .favorites-items {
-          margin-top: 22px;
-        }
+        .favorites-items{margin-top: 22px;}
+      }
+      .contacts-innerbox {
+        .contacts-map {width: 100%;}
       }
     }
   }

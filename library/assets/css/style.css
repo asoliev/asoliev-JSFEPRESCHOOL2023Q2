@@ -64,8 +64,10 @@ html{scroll-behavior: smooth;}
     }
 
     .nav-wrapper {
+
       display: flex;
       align-items: center;
+      position: relative;
 
       .nav-list {
         display: flex;
@@ -103,15 +105,69 @@ html{scroll-behavior: smooth;}
         margin-bottom: 8px;
         transition: all 1s ease;
       }
-    }
 
-    .profile-icon {
-      margin-left: 40px;
-      background-color: transparent;
-      border: none;
-    }
-    .profile-svg {
-      padding-right: 20px;
+      .profile-and-burger-icon {
+
+        .profile-menu-conatiner {
+
+          position: relative;
+
+          .profile-icon {
+            margin-left: 40px;
+            background-color: transparent;
+            border: none;
+          }
+
+          .profile-menu {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            overflow: hidden;
+            background-color: #FFF;
+            transition: height 0.5s ease;
+
+            width: 80px;
+            height: 0px;
+
+            position: absolute;
+            top: 40px;
+            right: 0px;
+            z-index: 1;
+
+            color: #000;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 133.333% */
+
+            .profile-menu-title {
+              margin: 5px 0px;
+              font-size: 15px;
+            }
+            .profile-menu-line {
+              width: 40px;
+              background-color: #BB945F;
+              /* border: 1px solid #BB945F; */
+              border: none;
+              height: 1px;
+              margin-bottom: 15px;
+            }
+            .profile-menu-body {
+              cursor: pointer;
+              background-color: transparent;
+              border: none;
+            }
+            .profile-menu-body:hover{color: #BB945F;}
+            .profile-menu-text1{margin-bottom: 10px;}
+          }
+          .profile-menu-show{height: 115px;}
+
+        }
+
+      }
+
     }
   }
 
@@ -243,27 +299,6 @@ html{scroll-behavior: smooth;}
             }
 
             .slider-radio-btn:checked:before{background-color: #BB945F;}
-
-            /* .slider-dot-box {
-              cursor: pointer;
-              border-color: transparent;
-              border-radius: 50%;
-              border-width: 0px;
-              background-color: transparent;
-              padding: 5px;
-              .slider-dot {
-                background-color: #0C0C0E;
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-              }
-            }
-            .slider-dot-box:disabled {
-              cursor: default;
-              .slider-dot {
-                background-color: #BB945F;
-              }
-            } */
           }
         }
 
@@ -283,7 +318,7 @@ html{scroll-behavior: smooth;}
       #favorites-header{margin-top: -15px;}
 
       .favorites-seasons {
-        width: 700px;
+        max-width: 700px;
 
         .favorites-seasons-fieldset {
           padding: 0px;
@@ -323,7 +358,7 @@ html{scroll-behavior: smooth;}
           .favorites-season-label > input:checked+span {
             font-weight: 700;
           }
-    
+
           .favorites-season-radio {
             position: relative;
             appearance: none;
@@ -795,6 +830,119 @@ html{scroll-behavior: smooth;}
       .rs-link{margin-left: 25px;}
       .rs-link:hover{color: #BB945F;}
       .github-account:hover{color: #BB945F;}
+    }
+  }
+
+  .modal {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+    .modal-register {
+      width: 250px;
+      height: 382px;
+      background-color: #FFF;
+      position: relative;
+      padding: 20px 25px;
+
+      .modal-register-title-container {
+        .modal-register-close-icon {
+          position: absolute;
+          top: 12px;
+          right: 13px;
+        }
+
+        .modal-register-title {
+          color: #000;
+          text-align: center;
+          font-family: Forum;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 100% */
+          letter-spacing: 0.4px;
+          text-transform: uppercase;
+        }
+        margin-bottom: 20px;
+      }
+
+      .modal-register-form {
+        color: #000;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 133.333% */
+        letter-spacing: 0.3px;
+
+        .modal-register-label {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+
+          .modal-register-input{margin-bottom: 10px;}
+        }
+
+        .modal-register-submit {
+          cursor: pointer;
+          width: 75px;
+          height: 30px;
+          flex-shrink: 0;
+
+          background-color: transparent;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 2px;
+          border: 1px solid #0C0C0E;
+
+          color: #0C0C0E;
+          text-align: center;
+          font-family: Inter;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 1px;
+        }
+
+        .modal-register-bottom {
+          font-family: Inter;
+          font-size: 10px;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: initial;
+
+          .modal-register-bottom-text {
+            color: #000;
+            text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+            font-weight: 400;
+            margin-right: 10px;
+          }
+
+          .modal-register-change-form {
+            cursor: pointer;
+            
+            color: #0C0C0E;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration-line: underline;
+          }
+          .modal-register-change-form:hover {
+            color: #BB945F;
+          }
+        }
+      }
     }
   }
 }

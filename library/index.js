@@ -144,7 +144,7 @@ function markWork() {
 
   console.log(libMark);
 }
-markWork();
+//markWork();
 
 
 function burgerMenuBehaviour(){
@@ -237,54 +237,73 @@ function sliderBehaviour() {
 }
 sliderBehaviour();
 
+function favoritesSeasonChange() {
+  const seasonForm = document.body.querySelector('.favorites-seasons');
 
-function favoritesSeasonChange(params) {
-  const seasonRadios = document.body.querySelectorAll('.favorites-season-radio');
-  seasonRadios.forEach(
-    (el) => el.addEventListener('change', (event) => drawFavoritesSeason(el.id))
-  );
-
-  let favoriteSeasonsData;
+  let books = null;
   async function getFavoriteSeasonsData() {
     const response = await fetch("./assets/favorites.json");
     return await response.json();
   }
   async function initFavoritesSeason() {
-    favoriteSeasonsData = await getFavoriteSeasonsData();
-    drawFavoritesSeason('winter');
+    books = await getFavoriteSeasonsData();
+    changeSeasonBook('winter');
   }
   initFavoritesSeason();
 
-  function drawFavoritesSeason(season) {
+  seasonForm.addEventListener('input', (e) => changeSeasonBook(e.target.id));
+  function changeSeasonBook(season) {
     const favoriteItems = document.body.querySelector('.favorites-items');
-    favoriteItems.style.opacity = "0";
-
-    for (let i = 0; i < 4; i++) {
-      const favoriteItem = document.body.querySelector(`[data-favorite-book='${i}']`);
-      drawFavoritesSeasonElements(favoriteItem, season, i);
-    }
-
-    setTimeout(() => { favoriteItems.style.opacity = "1"; }, 300);
+    favoriteItems.style.opacity = 0;
+    setTimeout(() => { drawSeasonBooks(season); }, 300);
   }
-  function drawFavoritesSeasonElements(favoriteItem, season, i) {
-    const header = favoriteItem.querySelector('.favorites-items-header');
-    header.innerHTML = `
-      <span class="favorites-items-title">
-        ${favoriteSeasonsData[season][i].title}
-      </span>
-      <br>
-      <span class="favorites-items-author">
-        By Sunyi Dean
-      </span>
-    `;
+  function drawSeasonBooks(season) {
+    const favoriteItems = document.body.querySelector('.favorites-items');
+    let html = '';
+    for (let i = 0; i < 4; i++) {
+       html += drawBookHTML(books[season][i], season, i);
+    }
+    favoriteItems.innerHTML = html;
+    favoriteItems.style.opacity = 1;
+  }
+  function drawBookHTML(obj, season, i) {
+    return `<div class='favorites-items-box'>
+      <h4 class='favorites-items-staff-picks'>Staff Picks</h4>
+      <hr class='favorites-items-hr'>
 
-    const description = favoriteItem.querySelector('.favorites-items-description');
-    description.innerHTML = favoriteSeasonsData[season][i].description;
+      <h5 class='favorites-items-header'>
+        <span class='favorites-items-title'>${obj.title}</span>
+        <br>
+        <span class='favorites-items-author'>${obj.author}</span>
+      </h5>
 
-    const coverImg = favoriteItem.querySelector('.favorites-items-box-img');
-    const bookName = `book${i+1}`;
-    coverImg.src = `./assets/img/favorites/${season}/${bookName}.jpg`;
-    coverImg.alt = bookName;
+      <p class='favorites-items-description'>${obj.description}</p>
+
+      <button type='button' class='button'>Buy</button>
+      <img src='assets/img/favorites/${season}/book${i+1}.jpg' alt='${obj.title}' class='favorites-items-box-img'>
+    </div>`;
   }
 }
 favoritesSeasonChange();
+
+
+const profileIcon = document.body.querySelector('.profile-icon');
+const profileMenu = document.body.querySelector('.profile-menu');
+profileIcon.addEventListener('click', (e)=> {
+  profileMenu.classList.toggle('profile-menu-show');
+});
+document.body.addEventListener('click', (event) => {
+  if (!profileMenu.contains(event.target) && !profileIcon.contains(event.target))
+  profileMenu.classList.remove('profile-menu-show');
+});
+
+
+
+const modalDiv = document.body.querySelector('.modal');
+const modalRegisterCloseIcon = document.body.querySelector('.modal-register-close-icon');
+modalRegisterCloseIcon.addEventListener(
+  'click',
+  () => {
+    modalDiv.style.display = 'none';
+  }
+);
