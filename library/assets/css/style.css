@@ -116,6 +116,10 @@ html{scroll-behavior: smooth;}
             margin-left: 40px;
             background-color: transparent;
             border: none;
+
+            .profile-icon-svg:hover > path {
+              fill:#BB945F;
+            }
           }
 
           .profile-menu {
@@ -160,7 +164,7 @@ html{scroll-behavior: smooth;}
               border: none;
             }
             .profile-menu-body:hover{color: #BB945F;}
-            .profile-menu-text1{margin-bottom: 10px;}
+            .profile-menu-login{margin-bottom: 10px;}
           }
           .profile-menu-show{height: 115px;}
 
@@ -799,7 +803,7 @@ html{scroll-behavior: smooth;}
         list-style: none;
         column-gap: 15px;
       }
-      .social-media-svg-path > path:hover {
+      .social-media-svg-path:hover > path {
         fill: #BB945F;
       }
     }
@@ -834,7 +838,7 @@ html{scroll-behavior: smooth;}
   }
 
   .modal {
-    display: flex;
+    display: none;
 
     justify-content: center;
     align-items: center;
@@ -849,21 +853,26 @@ html{scroll-behavior: smooth;}
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 
-    .modal-register {
+    .modal-form-container {
       width: 250px;
-      height: 382px;
       background-color: #FFF;
       position: relative;
       padding: 20px 25px;
 
-      .modal-register-title-container {
-        .modal-register-close-icon {
-          position: absolute;
-          top: 12px;
-          right: 13px;
-        }
+      .modal-form-title-container {
+        margin-bottom: 20px;
 
-        .modal-register-title {
+        .modal-form-close-icon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+        }
+        .modal-form-close-icon:active > path{stroke: red;}
+
+        .modal-form-title {
           color: #000;
           text-align: center;
           font-family: Forum;
@@ -874,10 +883,13 @@ html{scroll-behavior: smooth;}
           letter-spacing: 0.4px;
           text-transform: uppercase;
         }
-        margin-bottom: 20px;
       }
 
-      .modal-register-form {
+      .modal-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
         color: #000;
         font-family: Inter;
         font-size: 15px;
@@ -886,63 +898,54 @@ html{scroll-behavior: smooth;}
         line-height: 20px; /* 133.333% */
         letter-spacing: 0.3px;
 
-        .modal-register-label {
+        .modal-form-label {
           display: flex;
           flex-direction: column;
           row-gap: 10px;
 
-          .modal-register-input{margin-bottom: 10px;}
+          .modal-form-input{
+            color: #000;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; /* 133.333% */
+            letter-spacing: 0.3px;
+          }
         }
 
-        .modal-register-submit {
-          cursor: pointer;
-          width: 75px;
-          height: 30px;
-          flex-shrink: 0;
-
-          background-color: transparent;
+        .modal-form-submit {
           margin-top: 10px;
-          margin-bottom: 10px;
-          border-radius: 2px;
-          border: 1px solid #0C0C0E;
-
-          color: #0C0C0E;
-          text-align: center;
-          font-family: Inter;
-          font-size: 10px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: 1px;
         }
 
-        .modal-register-bottom {
+        .modal-form-bottom {
           font-family: Inter;
           font-size: 10px;
           font-style: normal;
           line-height: normal;
           letter-spacing: initial;
 
-          .modal-register-bottom-text {
+          .modal-form-bottom-text {
             color: #000;
             text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
             font-weight: 400;
             margin-right: 10px;
           }
 
-          .modal-register-change-form {
+          .modal-form-change-type {
             cursor: pointer;
-            
+
             color: #0C0C0E;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration-line: underline;
           }
-          .modal-register-change-form:hover {
-            color: #BB945F;
-          }
+          .modal-form-change-type:hover {color: #BB945F;}
         }
       }
+
+      .modal-register-form {display: none;}
+      .modal-login-form {display: none;}
     }
   }
 }

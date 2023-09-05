@@ -159,7 +159,6 @@ function burgerMenuBehaviour(){
     toggleClass(headerNav, 'nav-burger');
   })
 
-  
   const closeMenu = () => {
     burgerMenu.classList.remove('burger-menu-opened');
     headerNav.classList.remove('nav-burger');
@@ -167,7 +166,7 @@ function burgerMenuBehaviour(){
 
   headerItem.forEach((e) => e.addEventListener('click', closeMenu));
 
-  document.body.addEventListener('click', (event) => {
+  document.addEventListener('click', (event) => {
     if (!burgerMenu.contains(event.target) && !headerNav.contains(event.target))
       closeMenu();
   });
@@ -237,6 +236,7 @@ function sliderBehaviour() {
 }
 sliderBehaviour();
 
+
 function favoritesSeasonChange() {
   const seasonForm = document.body.querySelector('.favorites-seasons');
 
@@ -261,7 +261,7 @@ function favoritesSeasonChange() {
     const favoriteItems = document.body.querySelector('.favorites-items');
     let html = '';
     for (let i = 0; i < 4; i++) {
-       html += drawBookHTML(books[season][i], season, i);
+      html += drawBookHTML(books[season][i], season, i);
     }
     favoriteItems.innerHTML = html;
     favoriteItems.style.opacity = 1;
@@ -287,23 +287,127 @@ function favoritesSeasonChange() {
 favoritesSeasonChange();
 
 
-const profileIcon = document.body.querySelector('.profile-icon');
-const profileMenu = document.body.querySelector('.profile-menu');
-profileIcon.addEventListener('click', (e)=> {
-  profileMenu.classList.toggle('profile-menu-show');
-});
-document.body.addEventListener('click', (event) => {
-  if (!profileMenu.contains(event.target) && !profileIcon.contains(event.target))
-  profileMenu.classList.remove('profile-menu-show');
-});
+function profileMenu() {
+  const profileIcon = document.body.querySelector('.profile-icon');
+  const profileMenu = document.body.querySelector('.profile-menu');
+  const profileElements = document.body.querySelectorAll('.profile-menu-body');
+
+  const toggleProfileMenu = () => profileMenu.classList.toggle('profile-menu-show');
+
+  profileElements.forEach((el) => el.addEventListener('click', toggleProfileMenu));
+
+  profileIcon.addEventListener('click', toggleProfileMenu);
+
+  document.addEventListener('click', (event) => {
+    if (!profileMenu.contains(event.target) && !profileIcon.contains(event.target))
+      profileMenu.classList.remove('profile-menu-show');
+  });
+}
+profileMenu();
 
 
+function modalForms() {
+  const modalDiv = document.body.querySelector('.modal');
+  const modalFormContainer = document.body.querySelector('.modal-form-container');
+  const modalFormTitle = document.body.querySelector('.modal-form-title');
+  const registerForm = document.body.querySelector('.modal-register-form');
+  const loginForm = document.body.querySelector('.modal-login-form');
 
-const modalDiv = document.body.querySelector('.modal');
-const modalRegisterCloseIcon = document.body.querySelector('.modal-register-close-icon');
-modalRegisterCloseIcon.addEventListener(
-  'click',
-  () => {
-    modalDiv.style.display = 'none';
+  const profileMenuRegister = document.body.querySelector('.profile-menu-register');
+  const profileMenuLogin = document.body.querySelector('.profile-menu-login');
+  const modalRegisterCloseIcon = document.body.querySelector('.modal-form-close-icon');
+
+  modalRegisterCloseIcon.addEventListener('click', () => modalDiv.style.display = 'none');
+
+  modalDiv.addEventListener('click', (event) => {
+    if (!modalFormContainer.contains(event.target))
+      modalDiv.style.display = 'none';
+  });
+
+
+  function registerModalForm() {
+    profileMenuRegister.addEventListener('click', () => {
+      loginForm.style.display = 'none';
+      registerForm.style.display = 'flex';
+      modalFormTitle.innerHTML = 'Register';
+      modalDiv.style.display = 'flex';
+    });
+
+    function generateCardNumber() {
+      const characters = "0123456789abcdef"
+      let str = ""
+      for (let i = 0; i < 9; i++) {
+        const index = Math.floor(Math.random() * 16);
+        str += characters[index];
+      }
+      return str;
+    }
+
+    const user = {
+      firstName:'',
+      lastName:'',
+      email:'',
+      password:'',
+      cardNumber:''
+    }
+    const users = [];
+
+    function submitForm(e) {
+      e.preventDefault();
+      const firstName = registerForm.elements['register-first-name-input'];
+      const lastName = registerForm.elements['register-last-name-input'];
+      const email = registerForm.elements['register-email-input'];
+      const password = registerForm.elements['register-password-input'];
+      const cardNumber = generateCardNumber();
+
+      user.firstName = firstName.value;
+      user.lastName = lastName.value;
+      user.email = email.value;
+      user.password = password.value;
+      user.cardNumber = cardNumber;
+
+      users.push(user);
+
+      localStorage.setItem('user-data', JSON.stringify(users));
+
+      registerForm.submit();
+    }
+
+    registerForm.addEventListener('submit', submitForm);
   }
-);
+  registerModalForm();
+
+
+  function loginModalForm() {
+    profileMenuLogin.addEventListener('click', () => {
+      registerForm.style.display = 'none';
+      loginForm.style.display = 'flex';
+      modalFormTitle.innerHTML = 'Login';
+      modalDiv.style.display = 'flex';
+    });
+
+    function submitForm(e) {
+      e.preventDefault();
+      const email = loginForm.elements['login-email-input'];
+      const password = loginForm.elements['login-password-input'];
+
+      const tmp = localStorage.getItem('user-data');
+      const tmp1 = JSON.parse(tmp);
+      const tmp2 = tmp1.find((v) => {
+        console.log(email.value);
+        if (v.email === email.value) return true;
+        if (v.cardNumber === email.value) return true;
+        return false;
+      });
+      console.log(tmp2);
+      //loginForm.submit();
+    }
+
+    loginForm.addEventListener('submit', submitForm);
+  }
+  loginModalForm();
+}
+modalForms();
+const tmp = localStorage.getItem('user-data');
+//JSON.parse(tmp)[0]
+console.log(tmp);
