@@ -1,0 +1,90 @@
+#coffee-shop {
+  .coffee-shop-text {
+    margin-bottom: 40px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .coffee-shop-menus {
+    display: flex;
+    justify-content: space-between;
+
+    .coffee-shop-menu-header {
+      color: #bb945f;
+      font-family: Forum;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px; /* 100% */
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+
+    .coffee-shop-menu-right {
+      display: flex;
+      flex-direction: column;
+      align-self: end;
+      width: 464px;
+    }
+
+    .coffee-shop-menu-right-header {
+      text-align: end;
+    }
+
+    /* .coffee-shop-menu-data{} */
+
+    .coffee-shop-menu-subdata {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .coffee-shop-menu-name {
+      margin-right: 60px;
+      width: 200px;
+
+      color: #000;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px; /* 200% */
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+
+    .coffee-shop-menu-right-name {
+      text-align: end;
+      width: 212px;
+    }
+
+    .coffee-shop-menu-line {
+      width: 100px;
+      height: 1px;
+      background-color: #bb945f;
+      border-width: 0;
+      margin-right: 60px;
+    }
+
+    .coffee-shop-menu-price {
+      margin: 0px;
+
+      color: #000;
+      font-family: Forum;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px; /* 200% */
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import 'main-sections/library-card-body.css';
+@import 'main-sections/welcome.css';
+@import 'main-sections/about.css';
+@import 'main-sections/favorites.css';
+@import 'main-sections/coffee-shop.css';
+@import 'main-sections/contacts.css';
+
+.main {
+  .section{padding: 20px 20px 40px;}
+  .section-header {
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .sections-hr {
+    width: 50px;
+    background-color: #0C0C0E;
+    border: none;
+    height: 1px;
+    margin: 20px auto 40px;
+  }
+
+  /* #welcome */
+
+  /* #about */
+
+  /* #favorites */
+
+  /* #coffee-shop */
+
+  /* .contacts-innerbox */
+
+  /* .library-card-body */
+}

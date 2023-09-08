@@ -5,11 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
-
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/media.css">
-
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/favicon.ico">
 </head>
 
@@ -42,18 +38,39 @@
                 d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
                 fill="white" />
             </svg>
+            <p class="profile-icon-user"></p>
 
           </button>
 
-          <div class="profile-menu">
+          <div class="profile-menu-box">
 
-            <h2 class="profile-menu-title">Profile</h2>
+            <div class="profile-menu" id="profile-menu-unauthorized">
 
-            <hr class="profile-menu-line">
+              <h2 class="profile-menu-title">Profile</h2>
 
-            <button class="profile-menu-body profile-menu-login">Log In</button>
+              <hr class="profile-menu-line">
 
-            <button class="profile-menu-body profile-menu-register">Register</button>
+              <button class="profile-menu-button" id="profile-menu-login">Log In</button>
+
+              <div class="profile-menu-gap"></div>
+
+              <button class="profile-menu-button" id="profile-menu-register">Register</button>
+
+            </div>
+
+            <div class="profile-menu" id="profile-menu-authorized">
+
+              <h2 class="profile-menu-title" id="profile-menu-title2"></h2>
+
+              <hr class="profile-menu-line">
+
+              <button class="profile-menu-button" id="profile-menu-my-profile">My profile</button>
+
+              <div class="profile-menu-gap"></div>
+
+              <button class="profile-menu-button" id="profile-menu-logout">Logout</button>
+
+            </div>
 
           </div>
 
@@ -400,7 +417,7 @@
         <h2 class="modal-form-title">Register</h2>
       </div>
 
-      <form class="modal-form modal-register-form">
+      <form class="modal-form" id="modal-register-form">
 
         <label for="modal-register-first-name" class="modal-form-label">
           First name
@@ -435,7 +452,7 @@
 
       </form>
 
-      <form class="modal-form modal-login-form">
+      <form class="modal-form" id="modal-login-form">
 
         <label for="modal-login-email" class="modal-form-label">
           E-mail or readers card
@@ -462,7 +479,7 @@
 
   </div>
 
-  <script src="index.js"></script>
+  <script src="index.js" type="module"></script>
 </body>
 
 </html>

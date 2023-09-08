@@ -1,0 +1,70 @@
+.footer {
+  background-color: #0C0C0E;
+  padding: 20px 20px 44px;
+
+  .footer-part1 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+
+    .footer-part1-line1 {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .footer-part1-line1:last-child {margin-bottom: 0px;}
+    .footer-part1-line1-right{text-align: right;}
+
+    .footer-address {
+      display: block;
+      width: 230px;
+      text-decoration: none;
+
+      color: #FFF;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 133.333% */
+    }
+    .footer-address:hover{color: #BB945F;}
+    .footer-address-social-media {
+      display: flex;
+      list-style: none;
+      column-gap: 15px;
+    }
+    .social-media-svg-path:hover > path {fill: #BB945F;}
+  }
+
+  .footer-hr {
+    margin: 30px 0px 40px;
+    background-color: #FFF;
+    border: none;
+    height: 1px;
+  }
+
+  .footer-part2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+
+    .footer-part2-text-style {
+      color: #FFF;
+      text-align: center;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 100% */
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+    .rs-link{margin-left: 25px;}
+    .rs-link:hover{color: #BB945F;}
+    .github-account:hover{color: #BB945F;}
+  }
+}
