@@ -1,7 +1,7 @@
-export function favoritesSeasonChange() {
+export function favoritesSeasonChange(user, changeModalFormType) {
+  userObj = user;
   const seasonForm = document.body.querySelector('.favorites-seasons');
 
-  let books = null;
   async function getFavoriteSeasonsData() {
     const response = await fetch("./assets/favorites.json");
     return await response.json();
@@ -28,6 +28,7 @@ export function favoritesSeasonChange() {
 
     favoriteItems.innerHTML = html;
     favoriteItems.style.opacity = 1;
+    favoriteBuyBook(season, changeModalFormType);
   }
 
   function drawBookHTML(obj, season, i) {
@@ -38,13 +39,33 @@ export function favoritesSeasonChange() {
     <h5 class='favorites-items-header'>
       <span class='favorites-items-title'>${obj.title}</span>
       <br>
-      <span class='favorites-items-author'>${obj.author}</span>
+      <span class='favorites-items-author'>By ${obj.author}</span>
     </h5>
 
     <p class='favorites-items-description'>${obj.description}</p>
 
-    <button type='button' class='button'>Buy</button>
+    <button type='button' class='button favorite-buy-buttons'>Buy</button>
     <img src='assets/img/favorites/${season}/book${i + 1}.jpg' alt='${obj.title}' class='favorites-items-box-img'>
     </div>`;
   }
 }
+
+let books = null;
+let userObj = {};
+
+function favoriteBuyBook(season, changeModalFormType) {
+  const favoriteBuyButtons = document.querySelectorAll('.favorite-buy-buttons');
+  favoriteBuyButtons.forEach((el, n, p) => {
+    el.addEventListener('click', (event)=> favoriteBuyClick(event, n, season, changeModalFormType))
+  });
+}
+
+function favoriteBuyClick(event, n, season, changeModalFormType) {
+  const el = event.target;
+  if (!userObj) {
+    changeModalFormType(true);
+    modalDivToggle();
+  }
+}
+const modalDiv = document.body.querySelector('.modal');
+const modalDivToggle = () => modalDiv.classList.toggle('display-flex');

@@ -60,11 +60,11 @@
 
             <div class="profile-menu" id="profile-menu-authorized">
 
-              <h2 class="profile-menu-title" id="profile-menu-title2"></h2>
+              <h2 class="profile-menu-title" id="profile-menu-title-authorized"></h2>
 
               <hr class="profile-menu-line">
 
-              <button class="profile-menu-button" id="profile-menu-my-profile">My profile</button>
+              <button class="profile-menu-button" id="profile-menu-myprofile">My profile</button>
 
               <div class="profile-menu-gap"></div>
 
@@ -98,22 +98,23 @@
     </section>
 
     <section class="section" id="about">
-
+  
       <h2 class="section-header">About</h2>
       <hr class="sections-hr">
-
-      <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
-
+  
+      <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop
+        inside</p>
+  
       <div class="slider">
-
+  
         <button title="Previous slide" data-slide-btn="prev" class="slide-arrow" disabled>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
-
+  
         <div class="slider-container">
-
+  
           <div class="slider-image-box">
             <div class="slider-images">
               <img src="assets/img/image1.jpg" alt="image1" class="slider-image slide-1">
@@ -123,94 +124,102 @@
               <img src="assets/img/image5.jpg" alt="image3" class="slider-image slide-3">
             </div>
           </div>
-
+  
           <form class="slider-pagination">
-
+  
             <label for="slider-first-radio" class="slider-radio-label">
-              <input type="radio" id="slider-first-radio" data-pagination="0" name="slider-radio-group" class="slider-radio-btn" checked>
+              <input type="radio" id="slider-first-radio" data-pagination="0" name="slider-radio-group"
+                class="slider-radio-btn" checked>
             </label>
-
+  
             <label for="slider-second-radio" class="slider-radio-label">
-              <input type="radio" id="slider-second-radio" data-pagination="1" name="slider-radio-group" class="slider-radio-btn">
+              <input type="radio" id="slider-second-radio" data-pagination="1" name="slider-radio-group"
+                class="slider-radio-btn">
             </label>
-
+  
             <label for="slider-third-radio" class="slider-radio-label">
-              <input type="radio" id="slider-third-radio" data-pagination="2" name="slider-radio-group" class="slider-radio-btn">
+              <input type="radio" id="slider-third-radio" data-pagination="2" name="slider-radio-group"
+                class="slider-radio-btn">
             </label>
-
+  
             <label for="slider-fourth-radio" class="slider-radio-label slider-radio-hide">
-              <input type="radio" id="slider-fourth-radio" data-pagination="3" name="slider-radio-group" class="slider-radio-btn">
+              <input type="radio" id="slider-fourth-radio" data-pagination="3" name="slider-radio-group"
+                class="slider-radio-btn">
             </label>
-
+  
             <label for="slider-fifth-radio" class="slider-radio-label slider-radio-hide">
-              <input type="radio" id="slider-fifth-radio" data-pagination="4" name="slider-radio-group" class="slider-radio-btn">
+              <input type="radio" id="slider-fifth-radio" data-pagination="4" name="slider-radio-group"
+                class="slider-radio-btn">
             </label>
-
+  
           </form>
-
+  
         </div>
-
+  
         <button title="Next slide" data-slide-btn="next" class="slide-arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
-
+  
       </div>
-
+  
     </section>
 
     <section class="section" id="favorites">
-
+  
       <h2 class="section-header" id="favorites-header">Favorites</h2>
       <hr class="sections-hr" id="favorites-hr">
-
+  
       <form class="favorites-seasons">
-
+  
         <fieldset class="favorites-seasons-fieldset">
-
+  
           <legend class="favorites-season-title">Pick favorites of season</legend>
-
+  
           <label for="winter" class="favorites-season-label">
-            <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio" checked>
+            <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio"
+              checked>
             <span>Winter</span>
           </label>
-
+  
           <label for="spring" class="favorites-season-label">
             <input type="radio" id="spring" name="favorites-season-group" class="favorites-season-radio">
             <span>Spring</span>
           </label>
-
+  
           <label for="summer" class="favorites-season-label">
             <input type="radio" id="summer" name="favorites-season-group" class="favorites-season-radio">
             <span>Summer</span>
           </label>
-
+  
           <label for="autumn" class="favorites-season-label">
             <input type="radio" id="autumn" name="favorites-season-group" class="favorites-season-radio">
             <span>Autumn</span>
           </label>
-
+  
         </fieldset>
-
+  
       </form>
-
+  
       <div class="favorites-items"></div>
-
+  
     </section>
 
     <section class="section" id="coffee-shop">
       <h2 class="section-header" id="coffee-shop-header">Coffee shop</h2>
       <hr class="sections-hr">
       <p class="coffee-shop-text">
-        In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.
-        You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+        In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly
+        conversation.
+        You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can
+        try desserts from bakery.
       </p>
-
+  
       <div class="coffee-shop-menus">
         <div class="coffee-shop-menu-left">
           <h6 class="coffee-shop-menu-header coffee-shop-menu-left-header">Coffee & Tea</h6>
-
+  
           <div class="coffee-shop-menu-data coffee-shop-menu-left-data">
             <div class="coffee-shop-menu-subdata">
               <p class="coffee-shop-menu-name coffee-shop-menu-left-name">Cold Brew Coffee</p>
@@ -249,10 +258,10 @@
             </div>
           </div>
         </div>
-
+  
         <div class="coffee-shop-menu-right">
           <h6 class="coffee-shop-menu-header coffee-shop-menu-right-header">Desserts & Cakes</h6>
-
+  
           <div class="coffee-shop-menu-data coffee-shop-menu-right-data">
             <div class="coffee-shop-menu-subdata">
               <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Forest Gateau</p>
@@ -297,56 +306,85 @@
     <section class="section" id="contacts">
       <h2 class="section-header section-header-contacts">Our Contacts</h2>
       <hr class="sections-hr">
-
+  
       <div class="contacts-innerbox">
         <div class="contact-information">
           <div class="phone-info">
             <p class="contacts-text-info">For all Library inquiries:</p>
             <div class="phone-info-list">
-              <p class="phone-info-item">Please call <a class="phone-info-link" href="tel:6177302370">(617) 730-2370</a></p>
-              <p class="phone-info-item">For TTY service, please call <a class="phone-info-link" href="tel:6177302370">(617) 730-2370</a></p>
-              <p class="phone-info-item">Putterham Library: <a class="phone-info-link" href="tel:6177302370">(617) 730-2385</a></p>
+              <p class="phone-info-item">Please call <a class="phone-info-link" href="tel:6177302370">(617)
+                  730-2370</a></p>
+              <p class="phone-info-item">For TTY service, please call <a class="phone-info-link"
+                  href="tel:6177302370">(617) 730-2370</a></p>
+              <p class="phone-info-item">Putterham Library: <a class="phone-info-link"
+                  href="tel:6177302370">(617) 730-2385</a></p>
             </div>
           </div>
-
+  
           <div class="email-info">
             <p class="email-text-info">Senior Staff</p>
-            <span class="email-info-item">Library Director: <a class="email-info-link" href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></span>
+            <span class="email-info-item">Library Director: <a class="email-info-link"
+                href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></span>
           </div>
         </div>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s" width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contacts-map"></iframe>
+  
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s"
+          width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="contacts-map"></iframe>
       </div>
     </section>
 
     <section class="section" id="library-card">
+
       <h2 class="section-header">Digital Library Cards</h2>
       <hr class="sections-hr">
 
       <div class="library-card-body">
+
         <div class="find-card">
           <h3 class="find-card-title">Find your Library card</h3>
           <form class="card-body" action="#">
             <div class="card-bg">
               <p class="card-bg-title">Brooklyn Public Library</p>
-              <input type="text" id="readers-name" name="readers-name-input" class="card-input" placeholder="Reader's name" pattern="^[\w\d\-]*$" maxlength="50" title="Only letters, numbers and hyphen" required>
-              <input type="text" id="card-number" name="card-number-input" class="card-input" placeholder="Card number" pattern="^[\w\d\-]*$" maxlength="50" title="Only letters, numbers and hyphen" required>
+              <input type="text" id="readers-name" name="readers-name-input" class="card-input"
+                placeholder="Reader's name" pattern="^[\w\d\-]*$" maxlength="50"
+                title="Only letters, numbers and hyphen" required>
+              <input type="text" id="card-number" name="card-number-input" class="card-input"
+                placeholder="Card number" pattern="^[\w\d\-]*$" maxlength="50"
+                title="Only letters, numbers and hyphen" required>
             </div>
             <button type="submit" class="button check-card-button">Check the card</button>
           </form>
         </div>
 
-        <div class="get-card">
+        <div class="get-card" id="library-get-card-unauthorized">
           <p class="get-card-title">Get a reader card</p>
+
           <p class="get-card-text">
             You will be able to see a reader card after logging into account or you can register a new account
           </p>
+
           <div class="get-card-buttons">
-            <button type="button" class="button get-card-btn">Sign Up</button>
-            <button type="button" class="button get-card-btn">Log in</button>
+            <button type="button" class="button get-card-btn" id="library-card-signup">Sign Up</button>
+            <button type="button" class="button get-card-btn" id="library-card-login">Log in</button>
           </div>
         </div>
+
+        <div class="get-card" id="library-get-card-authorized">
+          <p class="get-card-title">Visit your profile</p>
+
+          <p class="get-card-text">
+            With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.
+          </p>
+
+          <div class="get-card-buttons">
+            <button type="button" class="button get-card-btn" id="library-card-profile">Profile</button>
+          </div>
+        </div>
+
       </div>
+
     </section>
 
   </main>
@@ -447,7 +485,7 @@
 
         <p class="modal-form-bottom">
           <span class="modal-form-bottom-text">Already have an account?</span>
-          <span class="modal-form-change-type">Login</span>
+          <span class="modal-form-change-type" id="modal-form-bottom-login">Login</span>
         </p>
 
       </form>
@@ -470,11 +508,32 @@
 
         <p class="modal-form-bottom">
           <span class="modal-form-bottom-text">Don’t have an account?</span>
-          <span class="modal-form-change-type">Register</span>
+          <span class="modal-form-change-type" id="modal-form-bottom-register">Register</span>
         </p>
 
       </form>
 
+    </div>
+
+    <div class="modal-myprofile-container">
+
+      <div class="myprofile-box-left">
+      </div>
+
+      <div class="myprofile-box-right">
+        <div class="modal-form-title-container modal-myprofile-title-container">
+
+          <svg class="modal-form-close-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+
+            <path class="modal-register-close-icons" d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3"/>
+
+            <path class="modal-register-close-icons" d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3"/>
+
+          </svg>
+
+          <h2 class="modal-form-title modal-myprofile-title">Register</h2>
+        </div>
+      </div>
     </div>
 
   </div>

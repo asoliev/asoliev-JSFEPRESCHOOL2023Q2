@@ -28,7 +28,6 @@
   .phone-info {
     margin-bottom: 40px;
   }
-  /* .phone-info-list{padding: 0px;} */
   .phone-info-item {
     margin-bottom: 20px;
     list-style: none;
@@ -41,7 +40,6 @@
     color: #bb945f;
   }
 
-  /* .email-info-list{padding: 0px;} */
   .email-info-item {
     margin-bottom: 20px;
     list-style: none;

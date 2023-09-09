@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap');
 @import 'normalize.css';
 @import 'media.css';
-@import 'components/header.css';
+@import 'components/header/header.css';
 @import 'components/main.css';
 @import 'components/footer.css';
 @import 'components/modal.css';
