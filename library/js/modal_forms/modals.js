@@ -47,8 +47,8 @@ const profileMenuAuthorized = document.getElementById('profile-menu-authorized')
 const profileMenuUnauthorized = document.getElementById('profile-menu-unauthorized');
 const profileIconSvg = document.body.querySelector('.profile-icon-svg');
 const profileIconUser = document.body.querySelector('.profile-icon-user');
-const libraryGetCardUnAuthorized = document.getElementById('library-get-card-unauthorized');
 const libraryGetCardAuthorized = document.getElementById('library-get-card-authorized');
+const libraryGetCardUnauthorized = document.getElementById('library-get-card-unauthorized');
 
 export function drawWebPageForAuthorizedUser(user) {
   profileIconSvg.style.display = 'none';
