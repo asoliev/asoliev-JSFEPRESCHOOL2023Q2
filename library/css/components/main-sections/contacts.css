@@ -1,0 +1,68 @@
+.contacts-innerbox {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+
+  .contacts-text-info {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .phone-info {
+    margin-bottom: 40px;
+  }
+  .phone-info-item {
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  .phone-info-link {
+    color: #000;
+    text-decoration: none;
+  }
+  .phone-info-link:hover {
+    color: #bb945f;
+  }
+
+  .email-info-item {
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  .email-text-info {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .email-info-link {
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+  }
+  .email-info-link:hover {
+    color: #bb945f;
+  }
+}

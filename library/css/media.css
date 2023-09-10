@@ -1,25 +1,27 @@
-/*carousel-slides*/
+/*img-slider*/
 @media (max-width: 1439px) {
   .body {
     .main {
       #about {
-        .carousel-slides{
-          margin-bottom: 20px;
+        .slider{
           width: 614px;
-          .slide-arrow{
-            display: block;
-            cursor: pointer;
-            padding-top: 45px;
+
+          .slide-arrow{display: block;}
+
+          .slider-container{
+            row-gap: 20px;
+
+            .slider-image-box {max-width: 450px;}
+
+            .slider-pagination {
+              .slider-radio-hide {display: block;}
+            }
           }
-        }
-        .carousel-container {
-          .carousel-radio-hide {display: block;}
         }
       }
     }
   }
   .slide-1{margin: 0 auto;}
-  .slide-2, .slide-3{display: none;}
 }
 
 /*strange changes*/
@@ -100,7 +102,7 @@
         }
         .nav-item{margin: 0px;}
 
-        .profile-and-menu-icon {
+        .profile-and-burger-icon {
           z-index: 2;
           display: flex;
           justify-content: end;
@@ -128,10 +130,24 @@
 @media (max-width: 768px) {
   .body {
     .main {
-      .contacts-innerbox {
-        .contacts-map {
-          width: 100%;
+      #welcome{background-image: url("../img/welcome768.jpg");}
+      #favorites {
+        #favorites-header{margin-top: -10px;}
+        #favorites-hr{margin-bottom: 30px;}
+        .favorites-seasons {
+          position: sticky;
+          top: 0px;
+          background-color: #FFF;
+          z-index: 1;
+          padding-top: 10px;
+          .favorites-seasons-fieldset {
+            .favorites-season-label {margin-bottom: 10px;}
+          }
         }
+        .favorites-items{margin-top: 22px;}
+      }
+      .contacts-innerbox {
+        .contacts-map {width: 100%;}
       }
     }
   }
