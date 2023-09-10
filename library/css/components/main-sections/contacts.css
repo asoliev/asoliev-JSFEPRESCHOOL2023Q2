@@ -25,9 +25,9 @@
     margin-top: 0px;
     margin-bottom: 40px;
   }
-  .phone-info {
-    margin-bottom: 40px;
-  }
+  .contacts-map { border: 0; }
+
+  .phone-info { margin-bottom: 40px; }
   .phone-info-item {
     margin-bottom: 20px;
     list-style: none;
@@ -36,9 +36,7 @@
     color: #000;
     text-decoration: none;
   }
-  .phone-info-link:hover {
-    color: #bb945f;
-  }
+  .phone-info-link:hover { color: #bb945f; }
 
   .email-info-item {
     margin-bottom: 20px;
@@ -62,7 +60,5 @@
     color: #000;
     text-decoration: none;
   }
-  .email-info-link:hover {
-    color: #bb945f;
-  }
+  .email-info-link:hover { color: #bb945f; }
 }
