@@ -5,17 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
-
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/media.css">
-
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/favicon.ico">
 </head>
 
 <body class="body">
 
   <header class="header">
+
     <h1 class="header-title">Brooklyn Public Library</h1>
 
     <div class="nav-wrapper">
@@ -30,23 +27,64 @@
         </ul>
       </nav>
 
-      <div class="profile-and-menu-icon">
-        <a href="#" class="profile-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
-              fill="white" />
-          </svg>
-        </a>
+      <div class="profile-and-burger-icon">
+
+        <div class="profile-menu-conatiner">
+
+          <button class="profile-icon">
+
+            <svg class="profile-icon-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
+                fill="white" />
+            </svg>
+            <p class="profile-icon-user"></p>
+
+          </button>
+
+          <div class="profile-menu-box">
+
+            <div class="profile-menu" id="profile-menu-unauthorized">
+
+              <h2 class="profile-menu-title">Profile</h2>
+
+              <hr class="profile-menu-line">
+
+              <button class="profile-menu-button" id="profile-menu-login">Log In</button>
+
+              <div class="profile-menu-gap"></div>
+
+              <button class="profile-menu-button" id="profile-menu-register">Register</button>
+
+            </div>
+
+            <div class="profile-menu" id="profile-menu-authorized">
+
+              <h2 class="profile-menu-title" id="profile-menu-title-authorized"></h2>
+
+              <hr class="profile-menu-line">
+
+              <button class="profile-menu-button" id="profile-menu-myprofile">My profile</button>
+
+              <div class="profile-menu-gap"></div>
+
+              <button class="profile-menu-button" id="profile-menu-logout">Logout</button>
+
+            </div>
+
+          </div>
+
+        </div>
 
         <div class="burger-menu">
           <div class="burger-menu-line line1"></div>
           <div class="burger-menu-line line2"></div>
           <div class="burger-menu-line line3"></div>
         </div>
+
       </div>
 
-     </div>
+    </div>
 
   </header>
 
@@ -60,185 +98,128 @@
     </section>
 
     <section class="section" id="about">
-
+  
       <h2 class="section-header">About</h2>
       <hr class="sections-hr">
-
-      <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
-
-      <div class="carousel-slides">
-
-        <div class="slide-arrow">
+  
+      <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop
+        inside</p>
+  
+      <div class="slider">
+  
+        <button title="Previous slide" data-slide-btn="prev" class="slide-arrow" disabled>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
+        </button>
+  
+        <div class="slider-container">
+  
+          <div class="slider-image-box">
+            <div class="slider-images">
+              <img src="assets/img/image1.jpg" alt="image1" class="slider-image slide-1">
+              <img src="assets/img/image2.jpg" alt="image2" class="slider-image slide-2">
+              <img src="assets/img/image3.jpg" alt="image3" class="slider-image slide-3">
+              <img src="assets/img/image4.jpg" alt="image3" class="slider-image slide-3">
+              <img src="assets/img/image5.jpg" alt="image3" class="slider-image slide-3">
+            </div>
+          </div>
+  
+          <form class="slider-pagination">
+  
+            <label for="slider-first-radio" class="slider-radio-label">
+              <input type="radio" id="slider-first-radio" data-pagination="0" name="slider-radio-group"
+                class="slider-radio-btn" checked>
+            </label>
+  
+            <label for="slider-second-radio" class="slider-radio-label">
+              <input type="radio" id="slider-second-radio" data-pagination="1" name="slider-radio-group"
+                class="slider-radio-btn">
+            </label>
+  
+            <label for="slider-third-radio" class="slider-radio-label">
+              <input type="radio" id="slider-third-radio" data-pagination="2" name="slider-radio-group"
+                class="slider-radio-btn">
+            </label>
+  
+            <label for="slider-fourth-radio" class="slider-radio-label slider-radio-hide">
+              <input type="radio" id="slider-fourth-radio" data-pagination="3" name="slider-radio-group"
+                class="slider-radio-btn">
+            </label>
+  
+            <label for="slider-fifth-radio" class="slider-radio-label slider-radio-hide">
+              <input type="radio" id="slider-fifth-radio" data-pagination="4" name="slider-radio-group"
+                class="slider-radio-btn">
+            </label>
+  
+          </form>
+  
         </div>
-
-        <div class="carousel-slides-inner-box">
-          <img src="assets/img/image1.jpg" alt="image1" class="carousel-image slide-1">
-          <img src="assets/img/image2.jpg" alt="image2" class="carousel-image slide-2">
-          <img src="assets/img/image3.jpg" alt="image3" class="carousel-image slide-3">
-        </div>
-
-        <div class="slide-arrow">
+  
+        <button title="Next slide" data-slide-btn="next" class="slide-arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </div>
-
+        </button>
+  
       </div>
-
-      <form class="carousel-container">
-        <label for="carousel-first-radio" class="carousel-radio-label">
-          <input type="radio" id="carousel-first-radio" name="carousel-radio-group" class="carousel-radio-group" checked="checked">
-        </label>
-
-        <label for="carousel-second-radio" class="carousel-radio-label">
-          <input type="radio" id="carousel-second-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-        <label for="carousel-third-radio" class="carousel-radio-label">
-          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-        <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
-          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-        <label for="carousel-third-radio" class="carousel-radio-label carousel-radio-hide">
-          <input type="radio" id="carousel-third-radio" name="carousel-radio-group" class="carousel-radio-group">
-        </label>
-
-      </form>
-
+  
     </section>
 
     <section class="section" id="favorites">
+  
       <h2 class="section-header" id="favorites-header">Favorites</h2>
-      <hr class="sections-hr">
+      <hr class="sections-hr" id="favorites-hr">
+  
       <form class="favorites-seasons">
+  
         <fieldset class="favorites-seasons-fieldset">
+  
           <legend class="favorites-season-title">Pick favorites of season</legend>
+  
           <label for="winter" class="favorites-season-label">
-            <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio" checked>
+            <input type="radio" id="winter" name="favorites-season-group" class="favorites-season-radio"
+              checked>
             <span>Winter</span>
           </label>
-    
+  
           <label for="spring" class="favorites-season-label">
             <input type="radio" id="spring" name="favorites-season-group" class="favorites-season-radio">
             <span>Spring</span>
           </label>
-    
+  
           <label for="summer" class="favorites-season-label">
             <input type="radio" id="summer" name="favorites-season-group" class="favorites-season-radio">
             <span>Summer</span>
           </label>
-    
+  
           <label for="autumn" class="favorites-season-label">
             <input type="radio" id="autumn" name="favorites-season-group" class="favorites-season-radio">
             <span>Autumn</span>
           </label>
+  
         </fieldset>
+  
       </form>
-
-      <div class="favorites-items">
-        <div class="favorites-items-box" id="first-book">
-          <h4 class="favorites-items-staff-picks">Staff Picks</h4>
-          <hr class="favorites-items-hr">
-          <h5 class="favorites-items-header">
-            <span class="favorites-items-title">
-              The Book Eaters
-            </span>
-            <br>
-            <span class="favorites-items-author">
-              By Sunyi Dean
-            </span>
-          </h5>
-          <p class="favorites-items-text">
-            An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater
-            son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance,
-            and a strong, complex protagonist. Not for the faint of heart.
-          </p>
-          <button type="button" class="button">Buy</button>
-          <img src="assets/img/book1.jpg" alt="book1" class="favorites-items-box-img">
-        </div>
   
-        <div class="favorites-items-box" id="second-book">
-          <h4 class="favorites-items-staff-picks">Staff Picks</h4>
-          <hr class="favorites-items-hr">
-          <h5 class="favorites-items-header">
-            <span class="favorites-items-title">
-              Cackle
-            </span>
-            <br>
-            <span class="favorites-items-author">
-              By Rachel Harrison
-            </span>
-          </h5>
-          <p class="favorites-items-text">
-            Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than
-            here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends
-            a beautiful witch.
-          </p>
-          <button type="button" class="button">Buy</button>
-          <img src="assets/img/book2.jpg" alt="book2" class="favorites-items-box-img">
-        </div>
+      <div class="favorites-items"></div>
   
-        <div class="favorites-items-box" id="third-book">
-          <h4 class="favorites-items-staff-picks">Staff Picks</h4>
-          <hr class="favorites-items-hr">
-          <h5 class="favorites-items-header">
-            <span class="favorites-items-title">
-              Dante: Poet of the Secular World
-            </span>
-            <br>
-            <span class="favorites-items-author">
-              By Erich Auerbach
-            </span>
-          </h5>
-          <p class="favorites-items-text">
-            Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in
-            general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into
-            something of divine significance—an inspired introduction to Dante's main themes.
-          </p>
-          <button type="button" class="button">Buy</button>
-          <img src="assets/img/book3.jpg" alt="book3" class="favorites-items-box-img">
-        </div>
-  
-        <div class="favorites-items-box" id="fourth-book">
-          <h4 class="favorites-items-staff-picks">Staff Picks</h4>
-          <hr class="favorites-items-hr">
-          <h5 class="favorites-items-header">
-            <span class="favorites-items-title">
-              The Last Queen
-            </span>
-            <br>
-            <span class="favorites-items-author">
-              By Clive Irving
-            </span>
-          </h5>
-          <p class="favorites-items-text">
-            A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors
-            have evolved and thrived as the modern world has changed around them.
-          </p>
-          <button type="button" class="button" disabled>Own</button>
-          <img src="assets/img/book4.jpg" alt="book4" class="favorites-items-box-img">
-        </div>
-      </div>
     </section>
 
     <section class="section" id="coffee-shop">
       <h2 class="section-header" id="coffee-shop-header">Coffee shop</h2>
       <hr class="sections-hr">
       <p class="coffee-shop-text">
-        In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.
-        You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+        In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly
+        conversation.
+        You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can
+        try desserts from bakery.
       </p>
-
+  
       <div class="coffee-shop-menus">
         <div class="coffee-shop-menu-left">
           <h6 class="coffee-shop-menu-header coffee-shop-menu-left-header">Coffee & Tea</h6>
-
+  
           <div class="coffee-shop-menu-data coffee-shop-menu-left-data">
             <div class="coffee-shop-menu-subdata">
               <p class="coffee-shop-menu-name coffee-shop-menu-left-name">Cold Brew Coffee</p>
@@ -277,10 +258,10 @@
             </div>
           </div>
         </div>
-
+  
         <div class="coffee-shop-menu-right">
           <h6 class="coffee-shop-menu-header coffee-shop-menu-right-header">Desserts & Cakes</h6>
-
+  
           <div class="coffee-shop-menu-data coffee-shop-menu-right-data">
             <div class="coffee-shop-menu-subdata">
               <p class="coffee-shop-menu-name coffee-shop-menu-right-name">Forest Gateau</p>
@@ -325,56 +306,85 @@
     <section class="section" id="contacts">
       <h2 class="section-header section-header-contacts">Our Contacts</h2>
       <hr class="sections-hr">
-
+  
       <div class="contacts-innerbox">
         <div class="contact-information">
           <div class="phone-info">
             <p class="contacts-text-info">For all Library inquiries:</p>
             <div class="phone-info-list">
-              <p class="phone-info-item">Please call <a class="phone-info-link" href="tel:6177302370">(617) 730-2370</a></p>
-              <p class="phone-info-item">For TTY service, please call <a class="phone-info-link" href="tel:6177302370">(617) 730-2370</a></p>
-              <p class="phone-info-item">Putterham Library: <a class="phone-info-link" href="tel:6177302370">(617) 730-2385</a></p>
+              <p class="phone-info-item">Please call <a class="phone-info-link" href="tel:6177302370">(617)
+                  730-2370</a></p>
+              <p class="phone-info-item">For TTY service, please call <a class="phone-info-link"
+                  href="tel:6177302370">(617) 730-2370</a></p>
+              <p class="phone-info-item">Putterham Library: <a class="phone-info-link"
+                  href="tel:6177302370">(617) 730-2385</a></p>
             </div>
           </div>
-
+  
           <div class="email-info">
             <p class="email-text-info">Senior Staff</p>
-            <span class="email-info-item">Library Director: <a class="email-info-link" href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></span>
+            <span class="email-info-item">Library Director: <a class="email-info-link"
+                href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></span>
           </div>
         </div>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s" width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contacts-map"></iframe>
+  
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s"
+          width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="contacts-map"></iframe>
       </div>
     </section>
 
     <section class="section" id="library-card">
+
       <h2 class="section-header">Digital Library Cards</h2>
       <hr class="sections-hr">
 
       <div class="library-card-body">
+
         <div class="find-card">
           <h3 class="find-card-title">Find your Library card</h3>
           <form class="card-body" action="#">
             <div class="card-bg">
               <p class="card-bg-title">Brooklyn Public Library</p>
-              <input type="text" id="readers-name" name="readers-name-input" class="card-input" placeholder="Reader's name" pattern="^[\w\d\-]*$" maxlength="50" title="Only letters, numbers and hyphen" required>
-              <input type="text" id="card-number" name="card-number-input" class="card-input" placeholder="Card number" pattern="^[\w\d\-]*$" maxlength="50" title="Only letters, numbers and hyphen" required>
+              <input type="text" id="readers-name" name="readers-name-input" class="card-input"
+                placeholder="Reader's name" pattern="^[\w\d\-]*$" maxlength="50"
+                title="Only letters, numbers and hyphen" required>
+              <input type="text" id="card-number" name="card-number-input" class="card-input"
+                placeholder="Card number" pattern="^[\w\d\-]*$" maxlength="50"
+                title="Only letters, numbers and hyphen" required>
             </div>
             <button type="submit" class="button check-card-button">Check the card</button>
           </form>
         </div>
 
-        <div class="get-card">
+        <div class="get-card" id="library-get-card-unauthorized">
           <p class="get-card-title">Get a reader card</p>
+
           <p class="get-card-text">
             You will be able to see a reader card after logging into account or you can register a new account
           </p>
+
           <div class="get-card-buttons">
-            <button type="button" class="button get-card-btn">Sign Up</button>
-            <button type="button" class="button get-card-btn">Log in</button>
+            <button type="button" class="button get-card-btn" id="library-card-signup">Sign Up</button>
+            <button type="button" class="button get-card-btn" id="library-card-login">Log in</button>
           </div>
         </div>
+
+        <div class="get-card" id="library-get-card-authorized">
+          <p class="get-card-title">Visit your profile</p>
+
+          <p class="get-card-text">
+            With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.
+          </p>
+
+          <div class="get-card-buttons">
+            <button type="button" class="button get-card-btn" id="library-card-profile">Profile</button>
+          </div>
+        </div>
+
       </div>
+
     </section>
 
   </main>
@@ -428,7 +438,107 @@
 
   </footer>
 
-  <script src="index.js"></script>
+  <div class="modal">
+
+    <div class="modal-form-container">
+
+      <div class="modal-form-title-container">
+
+        <svg class="modal-form-close-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+
+          <path class="modal-register-close-icons" d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3"/>
+
+          <path class="modal-register-close-icons" d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3"/>
+
+        </svg>
+
+        <h2 class="modal-form-title">Register</h2>
+      </div>
+
+      <form class="modal-form" id="modal-register-form">
+
+        <label for="modal-register-first-name" class="modal-form-label">
+          First name
+
+          <input type="text" id="modal-register-first-name" name="register-first-name-input" class="modal-form-input" required>
+        </label>
+
+        <label for="modal-register-last-name" class="modal-form-label">
+          Last name
+
+          <input type="text" id="modal-register-last-name" name="register-last-name-input" class="modal-form-input" required>
+        </label>
+
+        <label for="modal-register-email" class="modal-form-label">
+          E-mail
+
+          <input type="email" id="modal-register-email" name="register-email-input" class="modal-form-input" required>
+        </label>
+
+        <label for="modal-register-password" class="modal-form-label">
+          Password
+
+          <input type="password" id="modal-register-password" name="register-password-input" class="modal-form-input" minlength="8" required>
+        </label>
+
+        <button type="submit" class="modal-form-submit button">Sign Up</button>
+
+        <p class="modal-form-bottom">
+          <span class="modal-form-bottom-text">Already have an account?</span>
+          <span class="modal-form-change-type" id="modal-form-bottom-login">Login</span>
+        </p>
+
+      </form>
+
+      <form class="modal-form" id="modal-login-form">
+
+        <label for="modal-login-email" class="modal-form-label">
+          E-mail or readers card
+
+          <input type="email" id="modal-login-email" name="login-email-input" class="modal-form-input" required>
+        </label>
+
+        <label for="modal-login-password" class="modal-form-label">
+          Password
+
+          <input type="password" id="modal-login-password" name="login-password-input" class="modal-form-input" minlength="8" required>
+        </label>
+
+        <button type="submit" class="modal-form-submit button">Login</button>
+
+        <p class="modal-form-bottom">
+          <span class="modal-form-bottom-text">Don’t have an account?</span>
+          <span class="modal-form-change-type" id="modal-form-bottom-register">Register</span>
+        </p>
+
+      </form>
+
+    </div>
+
+    <div class="modal-myprofile-container">
+
+      <div class="myprofile-box-left">
+      </div>
+
+      <div class="myprofile-box-right">
+        <div class="modal-form-title-container modal-myprofile-title-container">
+
+          <svg class="modal-form-close-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+
+            <path class="modal-register-close-icons" d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3"/>
+
+            <path class="modal-register-close-icons" d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3"/>
+
+          </svg>
+
+          <h2 class="modal-form-title modal-myprofile-title">Register</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="index.js" type="module"></script>
 </body>
 
 </html>

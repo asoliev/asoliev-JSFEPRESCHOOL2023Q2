@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap');
+@import 'normalize.css';
+@import 'media.css';
+@import 'components/header/header.css';
+@import 'components/main.css';
+@import 'components/footer.css';
+@import 'components/modal.css';
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html{scroll-behavior: smooth;}
+
+.body {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3), 5px 0 5px rgba(0, 0, 0, 0.3);
+
+  .display-none {display: none;}
+  .display-block {display: block;}
+  .display-flex {display: flex;}
+
+  .button {
+    width: 75px;
+    height: 30px;
+  
+    background-color: #FFF;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    transition: background-color .5s linear;
+  
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+  }
+  .button:hover {
+    background-color: #BB945F;
+    border: none;
+    cursor: pointer;
+  }
+  .button:disabled {
+    background-color: #FFF;
+    border: 1px solid #BB945F;
+    color: #BB945F;
+    cursor: default;
+  }
+}
