@@ -38,7 +38,7 @@
                 d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z"
                 fill="white" />
             </svg>
-            <p class="profile-icon-user"></p>
+            <span class="profile-icon-user"></span>
 
           </button>
 
@@ -46,7 +46,7 @@
 
             <div class="profile-menu" id="profile-menu-unauthorized">
 
-              <h2 class="profile-menu-title">Profile</h2>
+              <p class="profile-menu-title">Profile</p>
 
               <hr class="profile-menu-line">
 
@@ -60,7 +60,7 @@
 
             <div class="profile-menu" id="profile-menu-authorized">
 
-              <h2 class="profile-menu-title" id="profile-menu-title-authorized"></h2>
+              <p class="profile-menu-title" id="profile-menu-title-authorized"></p>
 
               <hr class="profile-menu-line">
 
@@ -98,23 +98,23 @@
     </section>
 
     <section class="section" id="about">
-  
+
       <h2 class="section-header">About</h2>
       <hr class="sections-hr">
-  
+
       <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop
         inside</p>
-  
+
       <div class="slider">
-  
+
         <button title="Previous slide" data-slide-btn="prev" class="slide-arrow" disabled>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
-  
+
         <div class="slider-container">
-  
+
           <div class="slider-image-box">
             <div class="slider-images">
               <img src="assets/img/image1.jpg" alt="image1" class="slider-image slide-1">
@@ -124,46 +124,41 @@
               <img src="assets/img/image5.jpg" alt="image3" class="slider-image slide-3">
             </div>
           </div>
-  
+
           <form class="slider-pagination">
-  
+
             <label for="slider-first-radio" class="slider-radio-label">
-              <input type="radio" id="slider-first-radio" data-pagination="0" name="slider-radio-group"
-                class="slider-radio-btn" checked>
+              <input type="radio" id="slider-first-radio" data-pagination="0" name="slider-radio-group" title="1" class="slider-radio-btn" checked>
             </label>
-  
+
             <label for="slider-second-radio" class="slider-radio-label">
-              <input type="radio" id="slider-second-radio" data-pagination="1" name="slider-radio-group"
-                class="slider-radio-btn">
+              <input type="radio" id="slider-second-radio" data-pagination="1" name="slider-radio-group" title="2" class="slider-radio-btn">
             </label>
-  
+
             <label for="slider-third-radio" class="slider-radio-label">
-              <input type="radio" id="slider-third-radio" data-pagination="2" name="slider-radio-group"
-                class="slider-radio-btn">
+              <input type="radio" id="slider-third-radio" data-pagination="2" name="slider-radio-group" title="3" class="slider-radio-btn">
             </label>
-  
+
             <label for="slider-fourth-radio" class="slider-radio-label slider-radio-hide">
-              <input type="radio" id="slider-fourth-radio" data-pagination="3" name="slider-radio-group"
-                class="slider-radio-btn">
+              <input type="radio" id="slider-fourth-radio" data-pagination="3" name="slider-radio-group" title="4" class="slider-radio-btn">
             </label>
-  
+
             <label for="slider-fifth-radio" class="slider-radio-label slider-radio-hide">
-              <input type="radio" id="slider-fifth-radio" data-pagination="4" name="slider-radio-group"
-                class="slider-radio-btn">
+              <input type="radio" id="slider-fifth-radio" data-pagination="4" name="slider-radio-group" title="5" class="slider-radio-btn">
             </label>
-  
+
           </form>
-  
+
         </div>
-  
+
         <button title="Next slide" data-slide-btn="next" class="slide-arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
-  
+
       </div>
-  
+
     </section>
 
     <section class="section" id="favorites">
@@ -327,11 +322,8 @@
                 href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></span>
           </div>
         </div>
-  
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s"
-          width="696" height="414" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" class="contacts-map"></iframe>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0170745483792!2d-73.9900944!3d40.695621599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a49ebbb4533%3A0x83b2f30fade7bf9f!2s286%20Cadman%20Plaza%20E%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1690405946316!5m2!1sen!2s" width="696" height="414" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" class="contacts-map" title="location map"></iframe>
       </div>
     </section>
 
