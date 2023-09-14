@@ -38,5 +38,5 @@ function readLocalStorage() {
 readLocalStorage();
 
 profileMenu();
-modalForms(userObj, userIndex);
+modalForms(userObj, userIndex, changeModalFormType);
 favoritesSeasonChange(userObj, changeModalFormType);

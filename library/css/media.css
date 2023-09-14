@@ -130,7 +130,7 @@
 @media (max-width: 768px) {
   .body {
     .main {
-      #welcome{background-image: url("../img/welcome768.jpg");}
+      #welcome{background-image: url("../assets/img/welcome768.jpg");}
       #favorites {
         #favorites-header{margin-top: -10px;}
         #favorites-hr{margin-bottom: 30px;}
