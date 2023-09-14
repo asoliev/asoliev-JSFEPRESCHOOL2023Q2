@@ -1,4 +1,4 @@
-export function registerModalForm(modalDivToggle, userObj, changeModalFormType, drawWebPageForUnauthorizedUser) {
+export function registerModalForm(modalDivToggle, userObj, userIndex, changeModalFormType, drawWebPageForUnauthorizedUser) {
   const registerForm = document.getElementById('modal-register-form');
   const libraryCardSignup = document.getElementById('library-card-signup');
   const profileMenuRegister = document.getElementById('profile-menu-register');
