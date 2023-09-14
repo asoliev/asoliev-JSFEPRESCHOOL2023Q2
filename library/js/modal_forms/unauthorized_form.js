@@ -1,13 +1,15 @@
-export function registerModalForm(modalDivToggle, userObj, userIndex, changeModalFormType, drawWebPageForUnauthorizedUser) {
+export function registerModalForm(modalDivToggle, userObj, userIndex, changeModalFormType, drawWebPageForAuthorizedUser) {
   const registerForm = document.getElementById('modal-register-form');
   const libraryCardSignup = document.getElementById('library-card-signup');
   const profileMenuRegister = document.getElementById('profile-menu-register');
 
-  profileMenuRegister.addEventListener('click', () => {
+  function regClick() {
     changeModalFormType();
     modalDivToggle();
-  });
-  libraryCardSignup.addEventListener('click', modalDivToggle);
+  }
+
+  profileMenuRegister.addEventListener('click', regClick);
+  libraryCardSignup.addEventListener('click', regClick);
 
   function generateCardNumber() {
     const characters = "0123456789abcdef"
@@ -29,10 +31,11 @@ export function registerModalForm(modalDivToggle, userObj, userIndex, changeModa
     const cardNumber = generateCardNumber();
 
     const userDataJson = localStorage.getItem('user-data');
-    const userData = JSON.parse(userDataJson);
+    let userData = JSON.parse(userDataJson);
+    if (!userData) userData = [];
 
     let isValid = true;
-    userData.forEach((el) => {
+    userData?.forEach((el) => {
       if (el.email === email.value) {
         isValid = false;
         alert('Email is busy');
@@ -50,12 +53,12 @@ export function registerModalForm(modalDivToggle, userObj, userIndex, changeModa
     }
 
     userObj = tmpUserObj;
-    userIndex = userData.push(userObj) - 1;
+    userIndex = userData?.push(userObj) - 1;
 
     localStorage.setItem('user-data', JSON.stringify(userData));
 
     //registerForm.submit();
-    drawWebPageForUnauthorizedUser(userObj);
+    drawWebPageForAuthorizedUser(userObj);
     modalDivToggle();
   }
 
@@ -67,11 +70,13 @@ export function loginModalForm(modalDivToggle, changeModalFormType, userObj, use
   const libraryCardLogin = document.getElementById('library-card-login');
   const profileMenuLogin = document.getElementById('profile-menu-login');
 
-  profileMenuLogin.addEventListener('click', () => {
+  function loginClick() {
     changeModalFormType(true);
     modalDivToggle();
-  });
-  libraryCardLogin.addEventListener('click', modalDivToggle);
+  }
+
+  profileMenuLogin.addEventListener('click', loginClick);
+  libraryCardLogin.addEventListener('click', loginClick);
 
   function submitLogForm(e) {
     e.preventDefault();

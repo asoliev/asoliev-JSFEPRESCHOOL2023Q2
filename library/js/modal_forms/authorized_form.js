@@ -6,7 +6,7 @@ export function logoutFunc(user, userIndex) {
   function logoutClick(e) {
     let userDataJson = '';
     userDataJson = localStorage.getItem('user-data');
-    const userData = JSON.parse(userDataJson);
+    let userData = JSON.parse(userDataJson);
     userData[userIndex].isLoggedIn = false;
     userDataJson = JSON.stringify(userData);
     localStorage.setItem('user-data', userDataJson);
