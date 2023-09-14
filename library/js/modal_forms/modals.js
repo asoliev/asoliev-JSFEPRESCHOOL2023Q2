@@ -16,7 +16,7 @@ export function modalForms(userObj, userIndex, changeModalFormType) {
       modalDivToggleRemove();
   });
 
-  registerModalForm(modalDivToggle, userObj, userIndex, changeModalFormType, drawWebPageForUnauthorizedUser);
+  registerModalForm(modalDivToggle, userObj, userIndex, changeModalFormType, drawWebPageForAuthorizedUser);
   loginModalForm(modalDivToggle, changeModalFormType, userObj, userIndex, drawWebPageForAuthorizedUser);
   logoutFunc(userObj, userIndex);
 }
