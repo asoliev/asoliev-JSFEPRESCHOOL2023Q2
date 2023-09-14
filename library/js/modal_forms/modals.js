@@ -1,6 +1,6 @@
 import { registerModalForm, loginModalForm } from './unauthorized_form.js';
 import { logoutFunc } from './authorized_form.js';
-export function modalForms(userObj, userIndex) {
+export function modalForms(userObj, userIndex, changeModalFormType) {
   const modalDiv = document.body.querySelector('.modal');
   const modalFormContainer = document.body.querySelector('.modal-form-container');
 
