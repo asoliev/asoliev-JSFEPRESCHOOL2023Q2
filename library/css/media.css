@@ -1,0 +1,182 @@
+/*img-slider*/
+@media (max-width: 1439px) {
+  .body {
+    .main {
+      #about {
+        .slider{
+          width: 614px;
+
+          .slide-arrow{display: block;}
+
+          .slider-container{
+            row-gap: 20px;
+
+            .slider-image-box {max-width: 450px;}
+
+            .slider-pagination {
+              .slider-radio-hide {display: block;}
+            }
+          }
+        }
+      }
+    }
+  }
+  .slide-1{margin: 0 auto;}
+}
+
+/*strange changes*/
+@media (max-width: 1255px) {
+  .body {
+    .main {
+      #favorites {
+        .favorites-items {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      #contacts {
+        .contacts-innerbox {
+          flex-direction: column;
+          row-gap: 100px;
+        }
+        .contacts-map{padding: 0px 20px;}
+      }
+      .library-card-body {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        .get-card {
+          width: 600px;
+
+          .get-card-title, .get-card-text{
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          .get-card-buttons{justify-content: center;}
+        }
+      }
+    }
+  }
+}
+
+/*burger-menu*/
+@media (max-width: 1024px) {
+  .body {
+
+    .header {
+      position: relative;
+
+      .nav-wrapper {
+        .burger-menu{display: block;}
+
+        .burger-menu-opened {
+          .line1{transform: rotate(45deg) translate(9px, 10px);}
+          .line2{opacity: 0;}
+          .line3{transform: rotate(-45deg) translate(3px, -6px);}
+        }
+
+        .nav {
+          z-index: 1;
+
+          /* flex-direction: column-reverse;
+          justify-content: start;
+          row-gap: 44px; */
+
+          padding: 20px;
+          width: 332px;
+          height: 490px;
+          background-color: #0C0C0E;
+
+          position: absolute;
+          top: -600px;
+          right: -1px;
+          transition: all .7s ease;
+        }
+        .nav-burger{top: 80px;}
+
+        .nav-list {
+          flex-direction: column;
+          row-gap: 30px;
+          align-items: center;
+        }
+        .nav-item{margin: 0px;}
+
+        .profile-and-burger-icon {
+          z-index: 2;
+          display: flex;
+          justify-content: end;
+          height: 30px;
+          margin-right: -3px;
+        }
+      }
+    }
+
+    .main {
+      #coffee-shop {
+        .coffee-shop-text{width: 732px;}
+
+        .coffee-shop-menus {
+          flex-direction: column;
+          row-gap: 40px;
+        }
+      }
+    }
+
+  }
+}
+
+/*contacts-map width*/
+@media (max-width: 768px) {
+  .body {
+    .main {
+      #welcome{background-image: url("../assets/img/welcome768.jpg");}
+      #favorites {
+        #favorites-header{margin-top: -10px;}
+        #favorites-hr{margin-bottom: 30px;}
+        .favorites-seasons {
+          position: sticky;
+          top: 0px;
+          background-color: #FFF;
+          z-index: 1;
+          padding-top: 10px;
+          .favorites-seasons-fieldset {
+            .favorites-season-label {margin-bottom: 10px;}
+          }
+        }
+        .favorites-items{margin-top: 22px;}
+      }
+      .contacts-innerbox {
+        .contacts-map {width: 100%;}
+      }
+    }
+  }
+}
+
+/*coffee-shop-text width*/
+@media (max-width: 760px) {
+  .body {
+    .main {
+      #coffee-shop {
+        .coffee-shop-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*radio wrap*/
+@media (max-width: 730px) {
+  .body {
+    .main {
+      #favorites {
+        .favorites-seasons {
+          .favorites-seasons-fieldset {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}

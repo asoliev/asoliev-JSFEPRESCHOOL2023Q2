@@ -49,3 +49,9 @@
 - инструкция по проведению cross-check: https://docs.rs.school/#/cross-check-flow
 - форма для кросс-чека https://audio-player-cross-check.netlify.app/
 - ссылки на самые лучшие работы с интересным дополнительным функционалом добавьте, пожалуйста, в эту форму https://forms.gle/retrgFivX1ybcVbp9
+
+
+
+# Projects
+[1. Library](https://rolling-scopes-school.github.io/asoliev-JSFEPRESCHOOL2023Q2/library/)<br/>
+[2. Audio-Player](https://rolling-scopes-school.github.io/asoliev-JSFEPRESCHOOL2023Q2/audio-player/)<br/>
