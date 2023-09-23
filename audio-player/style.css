@@ -1,0 +1,113 @@
+body {
+  background-color: gray;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 700;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.player {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  position: relative;
+  border: 1px solid #000;
+}
+#trackCover {
+  width: 100%;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
+  background-color: gray;
+}
+/* .box:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+} */
+.control__box {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+}
+.audio__controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+button {
+  width: 55px;
+  height: 47px;
+}
+.hide{display: none;}
+#progressBar{width: 300px;}
+.time_box {
+  display: flex;
+  flex-direction: column;
+}
+.time__range {
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+  padding: 0 10px;
+}
+.volume__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 130px;
+  width: 100px;
+}
+#volumeControl {
+  display: block;
+  transform: rotate(-90deg);
+  background-color: red;
+}
+#mute {
+  display: block;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFF;
+  color: #000;
+  width: 50%;
+  margin: 0 auto;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+.user__github {
+  transform: scale(0.5);
+}
+/* .user__github :hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+} */
+/* .rs_school :hover {
+  transform: scale(1.2);
+  transition: scale 0.5s;
+} */
+.rs-school__logo {
+  width: 100px;
+  height: 100px;
+}
