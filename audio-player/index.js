@@ -1,5 +1,8 @@
 const audio = new Audio();
+audio.preload = 'metedata';
+audio.load();
 
+//volume/play_progress
 function mainActions() {
   function volumeActions() {
     const volumeControl = document.getElementById('volumeControl');
@@ -39,19 +42,28 @@ function mainActions() {
     function updateProgressBar() {
       progressBar.value = audio.currentTime;
       currentTime.textContent = formatTime(Math.round(audio.currentTime));
-    
-      progressBar.max = audio.duration;
-      durationTime.textContent = formatTime(Math.round(audio.duration));
     }
     audio.addEventListener('timeupdate', updateProgressBar);
 
-    progressBar.addEventListener('change', () => audio.currentTime = progressBar.value);
+    audio.addEventListener('loadedmetadata', (e)=> {
+      progressBar.max = audio.duration;
+      durationTime.textContent = formatTime(Math.round(audio.duration));
+    });
+
+    //progressBar.addEventListener('change', () => audio.currentTime = progressBar.value);
+    progressBar.addEventListener('click', (e) => {
+      const clickedX = e.clientX - progressBar.getBoundingClientRect().left;
+      const newPercent = (clickedX / progressBar.clientWidth) * 100;
+      audio.currentTime = (newPercent / 100) * audio.duration;
+  });
+
     progressBar.addEventListener('input', (e) => currentTime.textContent = formatTime(Math.round(e.target.value)));
   }
   playProgressActions();
 }
 mainActions();
 
+//play/prev/next
 function controlFunctions() {
   const stopBtn = document.getElementById('stop');
   function playAudio() {
@@ -62,6 +74,7 @@ function controlFunctions() {
     else audio.pause();
   }
 
+  //load data
   function prevNext() {
     const songArtist = document.getElementById('trackArtist');
     const songTitle = document.getElementById('trackTitle');
@@ -99,7 +112,7 @@ function controlFunctions() {
 
     previousBtn.addEventListener('click', () => {
       songIndex--;
-      if (songIndex <= 0) songIndex = data.length-1;
+      if (songIndex < 0) songIndex = data.length-1;
       updateSingInfo();
       playAudio();
     });
