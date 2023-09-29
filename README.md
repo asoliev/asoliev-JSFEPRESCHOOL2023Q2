@@ -3,3 +3,6 @@
 
 [2. Audio-Player](https://rolling-scopes-school.github.io/asoliev-JSFEPRESCHOOL2023Q2/audio-player/)<br/>
 [2. Audio-Player doc.](./audio-player/js30_1-2-audio-player.md)<br/>
+
+[2. Image-gallery](https://rolling-scopes-school.github.io/asoliev-JSFEPRESCHOOL2023Q2/image-gallery/)<br/>
+[2. Image-gallery doc.](./image-gallery/js30_2-2-image-galery.md)<br/>
