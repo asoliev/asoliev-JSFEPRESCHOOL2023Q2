@@ -1,6 +1,19 @@
 const galleryContainer = document.getElementById('gallery-container');
+const search = document.getElementById('search');
+const searchInput = document.getElementById('search-input');
+const clearInput = document.getElementById('clear-input');
+
+clearInput.addEventListener('click', (e) => {
+  searchInput.value = '';
+});
+search.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('1');
+  getData(searchInput.value);
+});
 
 function getData(query='start') {
+  console.log(query);
   const api = 'https://api.unsplash.com';
   const endpoint = '/search/photos';
   const paramArray = [
@@ -21,6 +34,8 @@ function renderImages(data) {
     console.log('Empty response');
     return;
   }
+
+  const galleryArray = [];
   data.results.map(item => {
     const img = document.createElement('img');
     img.classList.add('gallery-img');
@@ -31,12 +46,15 @@ function renderImages(data) {
     div.classList.add('gallery-card');
 
     div.append(img);
-    galleryContainer.append(div);
+    //galleryContainer.appendChild(div);
+    galleryArray.push(div);
 
     // const desc = document.createElement('p');
     // desc.classList.add('img-desc');
     // desc.textContent = item.description;
     // galleryContainer.append(desc);
   });
+  //console.log(galleryArray);
+  galleryContainer.replaceChildren(...galleryArray);
 }
 getData();
