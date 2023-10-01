@@ -2,18 +2,29 @@ const galleryContainer = document.getElementById('gallery-container');
 const search = document.getElementById('search');
 const searchInput = document.getElementById('search-input');
 const clearInput = document.getElementById('clear-input');
+const searchIcon = document.getElementById('search-icon');
+const closeIcon = document.getElementById('close-icon');
 
+searchInput.addEventListener('input', (e) => {
+  if (searchInput.value.length > 0) {
+    searchIcon.classList.add("hide");
+    closeIcon.classList.remove("hide");
+  }
+  else {
+    searchIcon.classList.remove("hide");
+    closeIcon.classList.add("hide");
+  }
+});
 clearInput.addEventListener('click', (e) => {
   searchInput.value = '';
 });
 search.addEventListener('submit', (e) => {
   e.preventDefault();
-  console.log('1');
   getData(searchInput.value);
 });
 
 function getData(query='start') {
-  console.log(query);
+  if (query.length < 1) return;
   const api = 'https://api.unsplash.com';
   const endpoint = '/search/photos';
   const paramArray = [
@@ -31,7 +42,7 @@ function getData(query='start') {
 }
 function renderImages(data) {
   if (data.total === 0) {
-    console.log('Empty response');
+    console.warn('Empty response');
     return;
   }
 
@@ -46,15 +57,8 @@ function renderImages(data) {
     div.classList.add('gallery-card');
 
     div.append(img);
-    //galleryContainer.appendChild(div);
     galleryArray.push(div);
-
-    // const desc = document.createElement('p');
-    // desc.classList.add('img-desc');
-    // desc.textContent = item.description;
-    // galleryContainer.append(desc);
   });
-  //console.log(galleryArray);
   galleryContainer.replaceChildren(...galleryArray);
 }
 getData();
